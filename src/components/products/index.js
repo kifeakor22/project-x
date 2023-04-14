@@ -37,7 +37,7 @@ const Product = () => {
      <Typography variant='h4' sx={{ textAlign: 'center', padding: '10px' }}>Reviewed Product</Typography>
       <Box className='project' sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', flexWrap: 'wrap', gap: '20px', padding: '20px' }}>
         {products.map((product) => (
-          <Card data-aos="fade-up"  key={product.id} sx={{ maxWidth: 345, padding: '10px',boxShadow: '0px 0px 10px 0px rgba(0,0,0,0.3)' }}>
+          <Card id='products' data-aos="fade-up"  key={product.id} sx={{ maxWidth: 345, padding: '10px'}}>
             <CardMedia
                component="img"
                alt={product.alt}
@@ -52,9 +52,9 @@ const Product = () => {
                 {product.description}
               </Typography>
             </CardContent>
-            <CardActions>
+            <CardActions sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '25px' }}>
               <img onClick={() => handleModalOpen(product)} className="goldenBtn" src={require('./assets/goldenBtn.png')} style={{ width: '60px' }} />
-                  <Button variant="contained" className='projectBtn' size="small" href='' target='_blank'>{product.price}</Button>
+                  <Button sx={{color: "#F5A623"}} variant="contained" className='projectBtn' size="small" href='' target='_blank'>{product.price}</Button>
             </CardActions>
           </Card>
         ))}

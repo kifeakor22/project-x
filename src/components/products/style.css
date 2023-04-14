@@ -40,3 +40,10 @@
     text-decoration: none;
     cursor: pointer;
 }
+
+
+
+.projectBtn {
+ background-color: var(--fontColor) !important;
+ color: white !important;
+}
