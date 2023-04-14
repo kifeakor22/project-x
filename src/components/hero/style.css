@@ -1,0 +1,15 @@
+.heroGrid {
+    background-image: url(../products/assets/herogrid.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: inset 0 0em 1em var(--fontColor);
+    padding: 20px;
+    margin: 20px;
+    height: 500px;
+    
+}
+.heroContent {
+    color: var(--fontColor) !important;
+
+}

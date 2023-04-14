@@ -1,0 +1,11 @@
+img {
+    height: 60px;
+}
+
+.navigation {
+    background-color: var(--mainColor) !important;
+}
+
+.navLink {
+    color: var(--fontColor) !important;
+}
