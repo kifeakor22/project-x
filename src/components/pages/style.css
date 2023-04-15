@@ -3,7 +3,8 @@
     padding: 30px;
 }
 
-#divider {
+.divider {
     border-color: var(--fontColor) !important;
     border-bottom-width: 3px;
+    
 }

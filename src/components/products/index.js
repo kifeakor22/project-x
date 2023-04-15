@@ -37,7 +37,7 @@ const Product = () => {
      <Typography variant='h4' sx={{ textAlign: 'center', padding: '10px' }}>Reviewed Product</Typography>
       <Box className='project' sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', flexWrap: 'wrap', gap: '20px', padding: '20px' }}>
         {products.map((product) => (
-          <Card id='products' data-aos="fade-up"  key={product.id} sx={{boxShadow: '0px 0px 10px 0px #F5A623', maxWidth: 345, padding: '10px'}}>
+          <Card id='products' data-aos="fade-up"  key={product.id} sx={{boxShadow: '0px 0px 10px 0px grey', maxWidth: 345, padding: '10px'}}>
             <CardMedia
                component="img"
                alt={product.alt}
