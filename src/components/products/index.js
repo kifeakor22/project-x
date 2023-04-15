@@ -44,7 +44,7 @@ const Product = () => {
                image = {require(`${product.image}`)}
                sx={{height: "150px", objectFit: "scale-down"}}
             />
-            <CardContent>
+            <CardContent sx={{ textAlign: 'center' }} >
               <Typography gutterBottom variant="h5" component="div">
                 {product.title}
               </Typography>
