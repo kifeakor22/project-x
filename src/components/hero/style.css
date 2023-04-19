@@ -11,5 +11,7 @@
 }
 .heroContent {
     color: var(--fontColor) !important;
-
+    font-weight: bolder;
+   font-family: Georgia, 'Times New Roman', Times, serif;
 }
+
