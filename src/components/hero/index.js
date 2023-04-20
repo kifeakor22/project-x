@@ -18,16 +18,16 @@ const Hero = () => {
     return (
         <>
         <Container className='heroGrid' disableGutters maxWidth="lg" component="main" sx={{ pt: 8, pb: 6 }}>
-        <Typography className='heroContent'
+        <Typography data-aos="fade-right" className='heroContent'
           component="h1"
           variant="h2"
           align="center"
           color="text.primary"
           gutterBottom
         >
-           <span data-aos="fade-up" class='exciting-font'>WhiskyTopia</span>
+           <span class='exciting-font'>WhiskyTopia</span>
         </Typography>
-        <Typography  data-aos="fade-down" className='heroContent' variant="h5" align="center" color="text.secondary" component="p">
+        <Typography data-aos="fade-left"  className='heroContent' variant="h5" align="center" color="text.secondary" component="p">
          <b>A Scotch Whisky gift review site</b>
         </Typography>
 
