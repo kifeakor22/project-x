@@ -39,6 +39,8 @@ function HomeContent() {
                         '&:hover': {
                             transform: 'scale(1)',
                         },
+                        // Stack image and text on small screens and place them side-by-side on large screens
+                        flexDirection: { xs: 'column', sm: 'row' },
                     }}
                 >
                     {/* Left Content */}
@@ -59,7 +61,6 @@ function HomeContent() {
                                 find something new. So, pull up a seat and get those taste buds ready.....
                             </p>
                         </Typography>
-                        <Button sx={{color: "#F5A623"}} variant="contained" className='projectBtn' size="largegit add " href='' target='_blank'>About Us</Button>
                     </Box>
 
                     {/* Right Side Image */}
@@ -68,13 +69,30 @@ function HomeContent() {
                         src={AboutUsImage}
                         alt="About Us"
                         sx={{
-                            maxWidth: '35%',
+                            maxWidth: { xs: '80%', sm: '50%' }, // Larger image on small screens
                             height: 'auto',
                             borderRadius: '10px',
                             boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+                            mt: { xs: 2, sm: 0 }, // Margin top for small screens to add spacing
                         }}
                     />
                 </Box>
+
+                {/* Centering the Button on small screens */}
+                <Button
+                    sx={{
+                        color: "#F5A623",
+                        display: 'block',
+                        margin: '20px auto', // Center the button
+                    }}
+                    variant="contained"
+                    className="projectBtn"
+                    size="large"
+                    href=""
+                    target="_blank"
+                >
+                    About Us
+                </Button>
 
                 <Product />
             </Container>
