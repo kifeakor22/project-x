@@ -1,69 +1,88 @@
-import React, {useEffect} from 'react';
+import React, { useEffect } from 'react';
 import Box from '@mui/material/Box';
-import './style.css'
+import './style.css';
 import { Divider } from '@mui/material';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
+import Button from '@mui/material/Button';
 import Nav from '../nav';
 import Hero from '../hero';
 import Product from '../products';
 import AOS from 'aos';
-
-
+import AboutUsImage from './assets/aboutus.jpg'; // Import your image here
 
 function HomeContent() {
-
-        useEffect(()=>{
+    useEffect(() => {
         AOS.init({
-            duration: 3000
-        })
-    },[])
+            duration: 3000,
+        });
+    }, []);
 
-  return (
-    <React.Fragment>
-      
-      {/* Hero unit */}
-      <Nav/>
-      
-      {/* Hero unit */}
-      <Hero/>
-     
-      
-      {/* End hero unit */}
-      
-      <Container maxWidth="md" component="main">
-        <Box className='aboutUs' sx={{
-        transition: 'transform 0.2s',
-        '&:hover': {
-            transform: 'scale(1)',
-        },
-    }}>
-        <Divider style={{ boarderColor: '#F5A623', borderBottomWidth: '3px' }} className='divider' textAlign='center'>
-  <Typography variant='h4' sx={{ textAlign: 'center', padding: '10px' }}>Who We Are?</Typography>
-</Divider>
+    return (
+        <React.Fragment>
+            {/* Hero unit */}
+            <Nav />
 
+            {/* Hero unit */}
+            <Hero />
 
-        <Typography data-aos="fade-up" variant='body1' mt={2} gutterBottom>
-    <p>Welcome to Whiskytopia! We're a group of lifelong pals from Glasgow, Scotland who review the best Scotch Whisky Gifts from carefully selected U.K. retailers. Our goal is to suggest gifts based on the occasion with a fun, humorous, and approachable tone. We're not your typical stuffy whisky blog or review site. We're passionate about Scotland, its people, land, and of course, its national drink - Scotch Whisky!</p>
+            {/* End hero unit */}
+            <Container maxWidth="md" component="main">
+                <Box
+                    className="aboutUs"
+                    sx={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'space-between',
+                        maxWidth: '100%', // Ensures it uses full available width
+                        transition: 'transform 0.2s',
+                        '&:hover': {
+                            transform: 'scale(1)',
+                        },
+                    }}
+                >
+                    {/* Left Content */}
+                    <Box sx={{ maxWidth: '100%' }}>
+                        <Typography variant="h3">
+                            <p>Lets start the journey</p>
+                        </Typography>
 
-    <p>We carefully select Whisky Gift items that we would either like to receive or give to loved ones, and our aim is to showcase and educate you on our years of personal enjoyment of various Scotch, combined with our extensive research of leading online whisky distilleries and retailers. We're thrilled you stopped by and invite you to stay awhile, have some fun, interact with us, and share your personal whisky journey with the wider community.</p>
+                        <Typography data-aos="fade-up" variant="body1" mt={2} gutterBottom>
+                            <p>
+                                Hey there, fellow whisky enthusiasts. Welcome to our blog; Whiskytopia. We’re
+                                here to use our experience, knowledge, passion, and a touch of humour to guide
+                                you through the world of Scotch Whisky Gift Sets and our great single bottle
+                                finds.
+                            </p>
+                            <p>
+                                So, whether you are a newbie, semi-knowledgeable or an expert, we hope you can
+                                find something new. So, pull up a seat and get those taste buds ready.....
+                            </p>
+                        </Typography>
+                        <Button sx={{color: "#F5A623"}} variant="contained" className='projectBtn' size="largegit add " href='' target='_blank'>About Us</Button>
+                    </Box>
 
-    <p>Please note that any views expressed are solely those of the founders, and we may receive a commission from online retailers for any products you choose to purchase through our website's links. As responsible adults, we ask that you enjoy our content responsibly, and remember to sip, not slurp! Slàinte Mhath! (Cheers). 
+                    {/* Right Side Image */}
+                    <Box
+                        component="img"
+                        src={AboutUsImage}
+                        alt="About Us"
+                        sx={{
+                            maxWidth: '35%',
+                            height: 'auto',
+                            borderRadius: '10px',
+                            boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+                        }}
+                    />
+                </Box>
 
-    Thank you for visiting Whiskytopia.</p>
-   
-</Typography>
-
-            </Box>
-
-    
-        <Product/>
-      </Container>
-      {/* End footer */}
-    </React.Fragment>
-  );
+                <Product />
+            </Container>
+            {/* End footer */}
+        </React.Fragment>
+    );
 }
 
 export default function Home() {
-  return <HomeContent />;
+    return <HomeContent />;
 }
