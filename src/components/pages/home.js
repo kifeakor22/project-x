@@ -10,6 +10,7 @@ import Hero from '../hero';
 import Product from '../products';
 import AOS from 'aos';
 import AboutUsImage from './assets/aboutus.jpg'; // Import your image here
+import Blog from '../blog';
 
 function HomeContent() {
     useEffect(() => {
@@ -93,6 +94,7 @@ function HomeContent() {
                 >
                     About Us
                 </Button>
+                <Blog/>
 
                 <Product />
             </Container>

@@ -7,11 +7,18 @@
     padding: 20px;
     margin: 20px;
     height: 500px;
-    
 }
+
 .heroContent {
     color: var(--fontColor) !important;
     font-weight: bolder;
-   font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Media query for small screens */
+@media (max-width: 600px) {
+    .heroGrid {
+        height: 250px; /* Reduce height by 50% on small screens */
+    }
 }
 
