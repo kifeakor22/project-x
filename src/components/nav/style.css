@@ -8,4 +8,6 @@ img {
 
 .navLink {
     color: var(--fontColor) !important;
+    font-weight: bolder !important; 
 }
+
