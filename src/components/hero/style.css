@@ -1,16 +1,19 @@
 .heroGrid {
-    background-image: url(../products/assets/female.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background-image: url(../products/assets/hamish.jpg);
+    background-size: cover; /* Ensures the image is scaled down */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    width: 100%; /* Set the width to cover the entire container */
     box-shadow: inset 0 0em 1em var(--fontColor);
     padding: 20px;
     margin: 20px;
-    height: 500px;
+    height: 600px; /* Reduce height by 40% */
+    
 }
 
+/* Ensure text visibility */
 .heroContent {
-    color: var(--fontColor) !important;
+    color: #F5A623 !important; /* Ensures the text is white for better contrast */
     font-weight: bolder;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
@@ -18,7 +21,7 @@
 /* Media query for small screens */
 @media (max-width: 600px) {
     .heroGrid {
-        height: 250px; /* Reduce height by 50% on small screens */
+        height: 150px; /* Further reduced height for small screens */
     }
 }
 

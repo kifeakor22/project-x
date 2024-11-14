@@ -46,7 +46,7 @@ function HomeContent() {
                 >
                     {/* Left Content */}
                     <Box sx={{ maxWidth: '100%' }}>
-                        <Typography variant="h3">
+                        <Typography variant="h4">
                             <p>Lets start the journey</p>
                         </Typography>
 

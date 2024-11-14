@@ -22,19 +22,15 @@ const Hero = () => {
                     pb: { xs: 3, sm: 6 }, // Adjust padding bottom for small screens
                     maxWidth: { xs: 'sm', md: 'lg' }, // Adjust maxWidth for small screens
                     minHeight: { xs: '50vh', sm: '70vh' }, // Reduce height on small screens
+                    minHeight: { xs: '30vh', sm: '50vh' }, // Reduced height by 40% for larger screens
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'flex-end', // Centers the text vertically
+                    alignItems: 'center', // Centers the text horizontally
+                    
                 }}
             >
-                <Typography
-                    data-aos="fade-right"
-                    className="heroContent"
-                    component="h1"
-                    variant="h2"
-                    align="center"
-                    color="text.primary"
-                    gutterBottom
-                >
-                    <span className="exciting-font">WhiskyTopia</span>
-                </Typography>
+               
                 <Typography
                     data-aos="fade-left"
                     className="heroContent"
