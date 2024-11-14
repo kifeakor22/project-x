@@ -27,19 +27,23 @@ const Hero = () => {
                     flexDirection: 'column',
                     justifyContent: 'flex-end', // Centers the text vertically
                     alignItems: 'center', // Centers the text horizontally
-                    
+                                    
                 }}
             >
                
                 <Typography
                     data-aos="fade-left"
                     className="heroContent"
-                    variant="h5"
+                    variant="h3"
                     align="center"
                     color="text.secondary"
                     component="p"
+                    sx={{
+                        fontSize: { xs: '1.5rem', sm: '2.5rem', md: '3rem' } // Adjust font size for small, medium, and large screens
+                      }}
+                    
                 >
-                    <b>A Scotch Whisky gift review site</b>
+                    <b>A Whisky Review site</b>
                 </Typography>
             </Container>
             <div>
