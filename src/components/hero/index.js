@@ -25,7 +25,7 @@ const Hero = () => {
                     minHeight: { xs: '30vh', sm: '50vh' }, // Reduced height by 40% for larger screens
                     display: 'flex',
                     flexDirection: 'column',
-                    justifyContent: 'flex-end', // Centers the text vertically
+                    justifyContent: 'flex-start', // Centers the text vertically
                     alignItems: 'center', // Centers the text horizontally
                                     
                 }}
@@ -43,7 +43,6 @@ const Hero = () => {
                       }}
                     
                 >
-                    <b>A Whisky Review site</b>
                 </Typography>
             </Container>
             <div>

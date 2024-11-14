@@ -13,8 +13,8 @@
 
 /* Ensure text visibility */
 .heroContent {
-    color: white !important; /* Ensures the text is white for better contrast */
-    font-weight: bolder;
+    color: rgb(215, 241, 149) !important; /* Ensures the text is white for better contrast */
+
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
