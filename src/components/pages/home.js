@@ -46,7 +46,10 @@ function HomeContent() {
                 >
                     {/* Left Content */}
                     <Box sx={{ maxWidth: '100%' }}>
-                        <Typography variant="h4">
+                        <Typography variant="h4"
+                         sx={{
+                            fontSize: { xs: '1.5rem', sm: '2.5rem', md: '3rem' } // Adjust font size for small, medium, and large screens
+                          }}>
                             <p>Lets start the journey</p>
                         </Typography>
 
