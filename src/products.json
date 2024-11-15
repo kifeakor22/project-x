@@ -23,12 +23,13 @@
     },
      {
         "id": 3,
-      "title": "Whisky Tasting Set",
-      "description": "Whisky Glass, Serving Stave & Water Dropper",
-    "image":"./assets/whisky+Tasting+set.jpg", 
+      "title": "Glen Moray Port Cask Gift Pack with 2x Glasses Whisky 70cl",
+      "description": "This Gift Pack from the Glen Moray Distillery in the prolific Speyside region features a 70cl bottle of their Port Cask Finished single malt and a pair of branded glasses",
+    "image":"./assets/glen-moray.webp", 
       "alt":"Whisky",
-    "price": "Price £55.95",
-     "review": "An absolute bargain & 'stoater' of a gift set. All the essentials. Whisky glass, wooden serving stave (tray) made from oak whisky barrels & a water dropper for adding a few drops of water to enhance your whisky's flavour. Impress your boss, neighbour, loved one. Cracking local Scottish artisan whisky glass making and accessory company - Angels' Share (referring to the 2% that evaporates up to the Angels)! Can't recommend this company enough."
+    "price": "Price £33.35",
+     "review": "Having visited their Elgin distillery in the populated Speyside region and sampled some of their core range including a distillery exclusive plus this Port Cask finish - the guys and girls at Glen Moray should definitely not be overlooked or written off. This is simply a great tasting dram and a blinding price point. Red currants and blackberries combined with vanilla, cinnamon and cocoa! You're all set up for a fireside chat! ",
+     "link" :   "https://www.masterofmalt.com/whiskies/glen-moray/glen-moray-port-cask-gift-pack-with-2x-glasses-whisky/"
          
     },
      {
