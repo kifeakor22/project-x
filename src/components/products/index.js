@@ -66,7 +66,7 @@ const Product = () => {
     <div
       style={{
         width: '100%',
-        margin: '20px 20px',
+        margin: '0',
         backgroundColor: '#f7f7f7', // Add a light background color for visibility
         padding: '0',
         overflowX: 'auto',
