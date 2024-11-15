@@ -54,7 +54,14 @@ const Product = () => {
             </CardContent>
             <CardActions sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '25px' }}>
               <img onClick={() => handleModalOpen(product)} className="goldenBtn" src={require('./assets/goldenBtn.png')} style={{ width: '60px' }} />
-                  <Button sx={{color: "#F5A623"}} variant="contained" className='projectBtn' size="small" href='' target='_blank'>{product.price}</Button>
+                  <Button   sx={{ color: "#F5A623" }} 
+    variant="contained" 
+    className='projectBtn' 
+    size="small" 
+    href={product.link} // Use the link field from products.json
+    target="_blank" 
+    rel="noopener noreferrer"
+                  >{product.price}</Button>
             </CardActions>
           </Card>
         ))}

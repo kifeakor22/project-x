@@ -1,25 +1,25 @@
 [
     {
          "id": 1,
-      "title": "Dalmore 12 Yr Old Gift Pack",
-      "description": "Stunning Highland Malt Whisky with equally visiual Stags Head on the bottle and the 2 gift glasses",
-    "image":"./assets/dalmore.jpg", 
+      "title": "Glasgow 1770 Triple Pack (3 x 50ml) Whisky",
+      "description": "Three tasty single malt Scotch whisky miniatures from The Glasgow Distillery Co. and its 1770 range!",
+    "image":"./assets/glasgow.webp", 
     "alt":"Whisky",
-    "price": "Price £65",
-    "review": "Another personal favourite of the WT co-founders. Serious street cred for this bottle in your collection. This Highland malt has a lot of citrus (orange) with chocolate and some roasted coffee and vanilla characteristics. A Royal Heritage dates back to 1263 when Chief of the Mackenzie clan saved King Alexander III from a charging stag. Hence the 12 pointed stag emblem was awarded as the clans coat of arms! One for the top shelve of the home bar and fire side stories! Matured in Bourbon & Oloroso sherry casks for that balanced flavour."
+    "price": "Price £20.60",
+    "review": "WT have a wee soft spot for this distiller hailing from our home city of Glas-Vegas (Glasgow) being the first producer back here for over 100 years! A triple lock promise! Flavour. Value. Experimentation! Three 50cl miniatures featuring The Original (Shortbread, Marzipan. Marmalade, Butterscotch), Triple Distilled (Smooth & Complex) & their Peated (well does what it says on the label - but with heather rich highland peat and maturation in American White Oak and finishing in Pedro Ximénez sherry casks - Wowzers! Absolute no nonsense just packed full of flavour and complexity!",
+    "link"  : "https://www.masterofmalt.com/whiskies/the-glasgow-distillery-co/glasgow-1770-triple-pack-3-x-50ml-whisky/"
     
         
     },
      {
         "id": 2,
-      "title": "Peat Monster Gift Pack",
-      "description": "The Peat Monster Scotch with 2 Peat Monster Glasses",
-    "image":"./assets/Compassbox.jpg", 
+      "title": "Ardnamurchan AD/ Gift Pack (4 x 5cl)",
+      "description": "A cracking set of miniatures featuring various single malts from the Ardnamurchan AD/ range",
+    "image":"./assets/ardnamurchan.webp", 
       "alt":"Whisky",
-    "price": "Price £60.74",
-     "review": "What's that coming over the hill...Is it a a Monster.....?! - An absolute Peat Bomb yet drinkable dram with some sweetness and some fruity characteristics. Born from a blend of Highland & Islay malts! Stunning when paired with a blue veined cheese. A superb blended malt from those uber experimental blenders at Compass Box. Have you tried the Peat Monster yet!? We trapped the beast between these two glasses."
-
-        
+    "price": "Price £30.67",
+     "review": "Absolute steal from Ardna! A real flight to quality from these independent rock star producers who are relatively new on the scene and already amassing a cult following. Featuring 4 x 50cl (yes big ones) of original expression, a rum, a sherry and even a sauternes (think apricot, peach & honey) cask finish!",
+     "link": "https://www.masterofmalt.com/whiskies/ardnamurchan/ardnamurchan-ad-gift-pack-4-x-5cl-whisky/"    
     },
      {
         "id": 3,
