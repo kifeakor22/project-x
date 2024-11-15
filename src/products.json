@@ -34,22 +34,24 @@
     },
      {
         "id": 4,
-      "title": "Talisker 10 Year Old  Plus Waterproof Dry Bag Gift Set",
-      "description": "Smokey Sweet Sea Salt Malt made by the sea on Isle of Skye.",
-    "image":"./assets/storm.jpg", 
+      "title": "Redbreast 12 Year Old Birdfeeder Gift Pack",
+      "description": "From the most popular Irish pot still whiskey brand in the world comes the limited edition Redbreast 12 Year Old Birdfeeder Gift Pack.",
+    "image":"./assets/redbreast.webp", 
       "alt":"Whisky",
-    "price": "Price £61",
-     "review": "Another personal favourite of the WT co-founders. Serious street cred for this bottle in your collection. This Highland malt has a lot of citrus (orange) with chocolate and some roasted coffee and vanilla characteristics. A Royal Heritage dates back to 1263 when Chief of the Mackenzie clan saved King Alexander III from a charging stag. Hence the 12 pointed stag emblem was awarded as the clans coat of arms! One for the top shelve of the home bar and fire side stories! Matured in Bourbon & Oloroso sherry casks for that balanced flavour."
+    "price": "Price £79",
+     "review": "Who's a pretty bird?! The marketing gurus at RedBreast are to be congratulated on this gift set. A copper presentation cage that doubles as a bird feeder with £3 off sales going to a bird charity. A little birdie also tells me that the liquid is a pretty sweet song too. Award winning and one of the most popular single pot still Irish Whiskey producers. Hats off to our Irish cousins! Full bodied with notes of baked orange peel, almonds, raisins, toffee and a long spicy finish.",
+     "link" : "https://www.whiskyshop.com/redbreast-12-year-old-birdfeeder-gift-pack"
         
     },
      {
         "id": 5,
-      "title": "Talisker 10 Year Old  Plus Waterproof Dry Bag Gift Set",
-      "description": "Smokey Sweet Sea Salt Malt made by the sea on Isle of Skye.",
-    "image":"./assets/dalmore.jpg", 
+      "title": "Pot Still Decanter + 2 Glasses",
+      "description": "stunning glass decanter from Stylish Whisky is part of their Alba Collection showcasing icons of Scotland and the whisky industry",
+    "image":"./assets/stylishwhisky.jpg", 
       "alt":"Whisky",
-    "price": "Price £61",
-     "review": "Another personal favourite of the WT co-founders. Serious street cred for this bottle in your collection. This Highland malt has a lot of citrus (orange) with chocolate and some roasted coffee and vanilla characteristics. A Royal Heritage dates back to 1263 when Chief of the Mackenzie clan saved King Alexander III from a charging stag. Hence the 12 pointed stag emblem was awarded as the clans coat of arms! One for the top shelve of the home bar and fire side stories! Matured in Bourbon & Oloroso sherry casks for that balanced flavour."
+    "price": "Price £99.00",
+     "review": "This decanter is a gift for a whisky lover who loves talking about whisky. Yes both G & T. It is a talking piece where you can pretend to others that you know the exact process of the whisky making process. We love this decanter and have bored, we mean educated :) many people to what a Pot still is.",
+     "link" : "https://www.whiskyshop.com/pot-still-tap-and-glasses"
            
     }, 
      {
