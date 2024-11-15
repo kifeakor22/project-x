@@ -1,50 +1,112 @@
-import React, {useState,useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
+import Slider from 'react-slick';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import { Box } from '@mui/material';
-import products from '../../products.json'
 import CardMedia from '@mui/material/CardMedia';
-import './style.css'
+import products from '../../products.json';
+import './style.css';
 import AOS from 'aos';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 const Product = () => {
-    const [modalOpen, setModalOpen] = useState(false)
-    const [modalContent, setModalContent] = useState({})
+  const [modalOpen, setModalOpen] = useState(false);
+  const [modalContent, setModalContent] = useState({});
 
-    const handleModalOpen = (product) => {
-        setModalOpen(true);
-        setModalContent(product);
-    };
-    const handleModalClose = () => {
-        setModalOpen(false);
-        setModalContent({});
-    };
+  const handleModalOpen = (product) => {
+    setModalOpen(true);
+    setModalContent(product);
+  };
 
+  const handleModalClose = () => {
+    setModalOpen(false);
+    setModalContent({});
+  };
 
+  useEffect(() => {
+    AOS.init({
+      duration: 3000,
+    });
+  }, []);
 
-
-      useEffect(()=>{
-        AOS.init({
-            duration: 3000
-        })
-    },[])
+  // Slider settings
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 1000,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    centerMode: false,
+    prevArrow: <div className="slick-arrow slick-prev">‹</div>,  // Custom prev arrow
+    nextArrow: <div className="slick-arrow slick-next">›</div>,  // Custom next arrow
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
 
   return (
-    <>
-     <Typography variant='h4' sx={{ textAlign: 'center', padding: '10px' }}>Reviewed Product</Typography>
-      <Box className='project' sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', flexWrap: 'wrap', gap: '20px', padding: '20px' }}>
+    <div
+      style={{
+        width: '100%',
+        margin: '20px 20px',
+        backgroundColor: '#f7f7f7', // Add a light background color for visibility
+        padding: '0',
+        overflowX: 'auto',
+      }}
+    >
+      <Typography variant="h4" sx={{ textAlign: 'center', padding: '10px' }}>
+        New and trending reviews
+      </Typography>
+      <Typography variant="body1" color="#ccc" textAlign="center">
+        This week's popular reviews
+      </Typography>
+
+      <Slider {...settings}>
         {products.map((product) => (
-          <Card id='products' data-aos="fade-up"  key={product.id} sx={{boxShadow: '0px 0px 10px 0px grey', maxWidth: 345, padding: '10px'}}>
+          <Card
+            key={product.id}
+            id="products"
+            data-aos="fade-up"
+            sx={{
+              boxShadow: '',
+              width: '300px',
+              height: '400px',
+              margin: '10px',
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'space-between',
+            }}
+          >
             <CardMedia
-               component="img"
-               alt={product.alt}
-               image = {require(`${product.image}`)}
-               sx={{height: "150px", objectFit: "scale-down"}}
+              component="img"
+              alt={product.alt}
+              image={require(`${product.image}`)}
+              sx={{
+                height: '150px',
+                objectFit: 'contain',
+                marginBottom: '10px',
+                marginTop: '10px',
+              }}
             />
-            <CardContent sx={{ textAlign: 'center' }} >
+            <CardContent sx={{ textAlign: 'center' }}>
               <Typography gutterBottom variant="h5" component="div">
                 {product.title}
               </Typography>
@@ -52,35 +114,51 @@ const Product = () => {
                 {product.description}
               </Typography>
             </CardContent>
-            <CardActions sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '25px' }}>
-              <img onClick={() => handleModalOpen(product)} className="goldenBtn" src={require('./assets/goldenBtn.png')} style={{ width: '60px' }} />
-                  <Button   sx={{ color: "#F5A623" }} 
-    variant="contained" 
-    className='projectBtn' 
-    size="small" 
-    href={product.link} // Use the link field from products.json
-    target="_blank" 
-    rel="noopener noreferrer"
-                  >{product.price}</Button>
+            <CardActions
+              sx={{
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                gap: '15px',
+              }}
+            >
+              <img
+                onClick={() => handleModalOpen(product)}
+                className="goldenBtn"
+                src={require('./assets/goldenBtn.png')}
+                style={{ width: '60px', cursor: 'pointer' }}
+              />
+              <Button
+                sx={{ color: '#F5A623' }}
+                variant="contained"
+                className="projectBtn"
+                size="small"
+                href={product.link}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {product.price}
+              </Button>
             </CardActions>
           </Card>
         ))}
-      </Box>
-       {modalOpen && (
-    <div className="modal">
-      <div className="modal-content">
-        <span className="close" onClick={handleModalClose}>&times;</span>
-        <h2>{modalContent.title}</h2>
-        <p>{modalContent.description}</p>
-        <p>{modalContent.review}</p>
-        
-      </div>
+      </Slider>
+
+      {modalOpen && (
+        <div className="modal">
+          <div className="modal-content">
+            <span className="close" onClick={handleModalClose}>
+              &times;
+            </span>
+            <h2>{modalContent.title}</h2>
+            <p>{modalContent.description}</p>
+            <p>{modalContent.review}</p>
+          </div>
+        </div>
+      )}
     </div>
-  )}
-    </>
   );
 };
 
 export default Product;
 
- 

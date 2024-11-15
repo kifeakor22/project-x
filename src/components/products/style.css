@@ -47,3 +47,38 @@
  background-color: var(--fontColor) !important;
  color: white !important;
 }
+
+/* Style for the custom arrows */
+.slick-arrow {
+    font-size: 30px; /* Larger arrows */
+    color: #F5A623; /* Orange color for arrows */
+    cursor: pointer;
+    z-index: 1000; /* Ensure arrows appear above other elements */
+  }
+  
+  .slick-prev,
+  .slick-next {
+    background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent background for better contrast */
+    padding: 10px;
+    border-radius: 50%; /* Round background */
+  }
+  
+  .slick-prev {
+    left: -50px; /* Position the previous arrow on the left */
+  }
+  
+  .slick-next {
+    right: -50px; /* Position the next arrow on the right */
+  }
+  
+  .slick-prev:hover,
+  .slick-next:hover {
+    color: #ff9800; /* Hover color */
+    background-color: rgba(0, 0, 0, 0.6); /* Darken the background on hover */
+  }
+  
+  /* Optional: Add a subtle shadow for better visibility */
+  .slick-prev, .slick-next {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  

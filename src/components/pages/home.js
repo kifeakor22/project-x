@@ -97,10 +97,9 @@ function HomeContent() {
                 >
                     About Us
                 </Button>
-                <Blog/>
-
-                <Product />
+                <Blog/>             
             </Container>
+            <Product />
             {/* End footer */}
         </React.Fragment>
     );
