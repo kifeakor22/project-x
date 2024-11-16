@@ -128,17 +128,6 @@ const Product = () => {
                 src={require('./assets/goldenBtn.png')}
                 style={{ width: '60px', cursor: 'pointer' }}
               />
-              <Button
-                sx={{ color: '#F5A623' }}
-                variant="contained"
-                className="projectBtn"
-                size="small"
-                href={product.link}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {product.price}
-              </Button>
             </CardActions>
           </Card>
         ))}
@@ -153,6 +142,15 @@ const Product = () => {
             <h2>{modalContent.title}</h2>
             <p>{modalContent.description}</p>
             <p>{modalContent.review}</p>
+            <Button
+                sx={{ color: '#F5A623' }}
+                variant="contained"
+                className="projectBtn"
+                size="small"
+                href={modalContent.link}
+                target="_blank"
+                rel="noopener noreferrer"
+              >Buy Now</Button>
           </div>
         </div>
       )}

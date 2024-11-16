@@ -11,6 +11,7 @@ import Product from '../products';
 import AOS from 'aos';
 import AboutUsImage from './assets/aboutus.jpg'; // Import your image here
 import Blog from '../blog';
+import Footer from '../footer';
 
 function HomeContent() {
     useEffect(() => {
@@ -100,6 +101,7 @@ function HomeContent() {
                 <Blog/>             
             </Container>
             <Product />
+            <Footer/>
             {/* End footer */}
         </React.Fragment>
     );
