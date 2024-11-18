@@ -149,7 +149,7 @@ const Product = () => {
     className="NewModal"
     fullWidth
     variant="outlined"
-    label="Taste 🌟"
+    label="👅"
     value={modalContent.taste} // Populating from product data
     placeholder="Describe the taste"
     sx={{
@@ -167,7 +167,7 @@ const Product = () => {
     className="NewModal"
     fullWidth
     variant="outlined"
-    label="Smell 👃"
+    label="👃"
     value={modalContent.smell} // Populating from product data
     placeholder="Describe the smell"
     sx={{
@@ -185,7 +185,7 @@ const Product = () => {
     className="NewModal"
     fullWidth
     variant="outlined"
-    label="Region 🌍"
+    label="🌍"
     value={modalContent.region} // Populating from product data
     placeholder="Enter the whisky's region"
     sx={{
