@@ -46,7 +46,7 @@
      {
         "id": 5,
       "title": "Pot Still Decanter + 2 Glasses",
-      "description": "stunning glass decanter from Stylish Whisky is part of their Alba Collection showcasing icons of Scotland and the whisky industry",
+      "description": "stunning glass decanter from Stylish Whisky ",
     "image":"./assets/stylishwhisky.jpg", 
       "alt":"Whisky",
     "price": "Price £99.00",
@@ -67,8 +67,8 @@
     },
      {
         "id": 7,
-      "title": "The GlenAllachie 12 Year Old Single Malt Scotch With Branded Glass",
-      "description": " Indulge in the enticing flavor notes of Glenallachie 12, where the marriage of oak, fruitiness, and subtle spices.",
+      "title": "GlenAllachie 12 Year Old Single Malt Scotch With Branded Glass",
+      "description": "Indulge in the enticing flavor notes,the marriage of oak, fruitiness, and subtle spices.",
     "image":"./assets/glen.jpg", 
       "alt":"Whisky",
     "price": "Price £61",
