@@ -72,6 +72,14 @@ const Nav = () => {
           ) : (
             // Show Navigation Links on Larger Screens
             <nav>
+               <Button
+                className="navLink"
+                variant="button"
+                href=""
+                sx={{ my: 1, mx: 1.5, color: 'inherit' }}
+              >
+                Blog
+              </Button>
               <Button
                 className="navLink"
                 variant="button"
