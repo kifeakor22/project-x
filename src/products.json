@@ -56,23 +56,24 @@
     }, 
      {
         "id": 6,
-      "title": "Talisker 10 Year Old  Plus Waterproof Dry Bag Gift Set",
-      "description": "Smokey Sweet Sea Salt Malt made by the sea on Isle of Skye.",
-    "image":"./assets/dalmore.jpg", 
+      "title": "Nikka from the Barrel Silhouette 2 Glass & Pourer Gift Pack",
+      "description": "A Japanese blended whisky made with single malt from their Yoichi and Miyagikyo distilleries",
+    "image":"./assets/nikka.webp", 
       "alt":"Whisky",
     "price": "Price £61",
-     "review": "Another personal favourite of the WT co-founders. Serious street cred for this bottle in your collection. This Highland malt has a lot of citrus (orange) with chocolate and some roasted coffee and vanilla characteristics. A Royal Heritage dates back to 1263 when Chief of the Mackenzie clan saved King Alexander III from a charging stag. Hence the 12 pointed stag emblem was awarded as the clans coat of arms! One for the top shelve of the home bar and fire side stories! Matured in Bourbon & Oloroso sherry casks for that balanced flavour."
+     "review": "Another personal favourite of the WT co-founders. Serious street cred for this bottle in your collection. This Highland malt has a lot of citrus (orange) with chocolate and some roasted coffee and vanilla characteristics. A Royal Heritage dates back to 1263 when Chief of the Mackenzie clan saved King Alexander III from a charging stag. Hence the 12 pointed stag emblem was awarded as the clans coat of arms! One for the top shelve of the home bar and fire side stories! Matured in Bourbon & Oloroso sherry casks for that balanced flavour.",
+     "link": "https://www.whiskyshop.com/nikka-from-the-barrel-silhouette-2-glass-pourer-gift-pack"
         
     },
      {
         "id": 7,
-      "title": "Talisker 10 Year Old  Plus Waterproof Dry Bag Gift Set",
-      "description": "Smokey Sweet Sea Salt Malt made by the sea on Isle of Skye.",
-    "image":"./assets/dalmore.jpg", 
+      "title": "The GlenAllachie 12 Year Old Single Malt Scotch With Branded Glass",
+      "description": " Indulge in the enticing flavor notes of Glenallachie 12, where the marriage of oak, fruitiness, and subtle spices.",
+    "image":"./assets/glen.jpg", 
       "alt":"Whisky",
     "price": "Price £61",
-     "review": "Another personal favourite of the WT co-founders. Serious street cred for this bottle in your collection. This Highland malt has a lot of citrus (orange) with chocolate and some roasted coffee and vanilla characteristics. A Royal Heritage dates back to 1263 when Chief of the Mackenzie clan saved King Alexander III from a charging stag. Hence the 12 pointed stag emblem was awarded as the clans coat of arms! One for the top shelve of the home bar and fire side stories! Matured in Bourbon & Oloroso sherry casks for that balanced flavour."
-    
+     "review": "Another personal favourite of the WT co-founders. Serious street cred for this bottle in your collection. This Highland malt has a lot of citrus (orange) with chocolate and some roasted coffee and vanilla characteristics. A Royal Heritage dates back to 1263 when Chief of the Mackenzie clan saved King Alexander III from a charging stag. Hence the 12 pointed stag emblem was awarded as the clans coat of arms! One for the top shelve of the home bar and fire side stories! Matured in Bourbon & Oloroso sherry casks for that balanced flavour.",
+     "link":    "https://amzn.eu/d/aTevzlB"
     }
 
 ]
