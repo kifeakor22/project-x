@@ -1,5 +1,5 @@
 .heroGrid {
-    background-image: url(../products/assets/female.jpg);
+    background-image: url(../products/assets/hero.jpg);
     background-size: cover; /* Ensures the image is scaled down */
     background-position: center; /* Centers the image */
     background-repeat: no-repeat; /* Prevents the image from repeating */
