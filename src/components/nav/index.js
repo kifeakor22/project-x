@@ -134,7 +134,7 @@ const Nav = () => {
           onKeyDown={toggleDrawer(false)}
           sx={{ width: 250 }}
         >
-          {['Novice', 'Intermediary', 'Expert', 'Region'].map((text, index) => (
+          {['Blog','Novice', 'Intermediary', 'Expert', 'Region'].map((text, index) => (
             <React.Fragment key={text}>
               <ListItem disablePadding>
                 <ListItemButton
