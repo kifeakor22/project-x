@@ -11,6 +11,7 @@ import './style.css';
 import AOS from 'aos';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import TextField from '@mui/material/TextField';
 
 const Product = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -142,6 +143,64 @@ const Product = () => {
             <h2>{modalContent.title}</h2>
             <p>{modalContent.description}</p>
             <p>{modalContent.review}</p>
+            <form>
+  {/* Populating form with product data */}
+  <TextField
+    className="NewModal"
+    fullWidth
+    variant="outlined"
+    label="Taste 🌟"
+    value={modalContent.taste} // Populating from product data
+    placeholder="Describe the taste"
+    sx={{
+      marginBottom: '10px',
+      '& .MuiInputLabel-root': { color: '#F5A623' },  // Golden label color
+      '& .MuiOutlinedInput-root': {
+        '& fieldset': { border: 'none' }, // Remove border
+        '&:hover fieldset': { border: 'none' }, // Remove border on hover
+        '&.Mui-focused fieldset': { border: 'none' }, // Remove border when focused
+        color: '#F5A623', // Golden input text color
+      },
+    }}
+  />
+  <TextField
+    className="NewModal"
+    fullWidth
+    variant="outlined"
+    label="Smell 👃"
+    value={modalContent.smell} // Populating from product data
+    placeholder="Describe the smell"
+    sx={{
+      marginBottom: '10px',
+      '& .MuiInputLabel-root': { color: '#F5A623' },
+      '& .MuiOutlinedInput-root': {
+        '& fieldset': { border: 'none' }, // Remove border
+        '&:hover fieldset': { border: 'none' }, // Remove border on hover
+        '&.Mui-focused fieldset': { border: 'none' }, // Remove border when focused
+        color: '#F5A623', // Golden input text color
+      },
+    }}
+  />
+  <TextField
+    className="NewModal"
+    fullWidth
+    variant="outlined"
+    label="Region 🌍"
+    value={modalContent.region} // Populating from product data
+    placeholder="Enter the whisky's region"
+    sx={{
+      marginBottom: '20px',
+      '& .MuiInputLabel-root': { color: '#F5A623' },
+      '& .MuiOutlinedInput-root': {
+        '& fieldset': { border: 'none' }, // Remove border
+        '&:hover fieldset': { border: 'none' }, // Remove border on hover
+        '&.Mui-focused fieldset': { border: 'none' }, // Remove border when focused
+        color: '#F5A623', // Golden input text color
+      },
+    }}
+  />
+</form>
+
             <Button
                 sx={{ color: '#F5A623' }}
                 variant="contained"
