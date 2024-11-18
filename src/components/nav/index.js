@@ -49,7 +49,10 @@ const Nav = () => {
             className="navLink"
             variant="h6"
             noWrap
-            sx={{ flexGrow: 1 }}
+            sx={{
+              flexGrow: 1,
+              color: '#F5A623', // Gold color for "WhiskyTopia"
+            }}
           >
             WhiskyTopia
           </Typography>
@@ -58,9 +61,11 @@ const Nav = () => {
           {isSmallScreen ? (
             <IconButton
               edge="end"
-              color="inherit"
               aria-label="menu"
               onClick={toggleDrawer(true)}
+              sx={{
+                color: '#F5A623', // Gold color for Hamburger icon
+              }}
             >
               <MenuIcon />
             </IconButton>
@@ -71,7 +76,7 @@ const Nav = () => {
                 className="navLink"
                 variant="button"
                 href=""
-                sx={{ my: 1, mx: 1.5 }}
+                sx={{ my: 1, mx: 1.5, color: 'inherit' }}
               >
                 Novice
               </Button>
@@ -79,7 +84,7 @@ const Nav = () => {
                 className="navLink"
                 variant="button"
                 href=""
-                sx={{ my: 1, mx: 1.5 }}
+                sx={{ my: 1, mx: 1.5, color: 'inherit' }}
               >
                 Intermediary
               </Button>
@@ -87,7 +92,7 @@ const Nav = () => {
                 className="navLink"
                 variant="button"
                 href=""
-                sx={{ my: 1, mx: 1.5 }}
+                sx={{ my: 1, mx: 1.5, color: 'inherit' }}
               >
                 Expert
               </Button>
@@ -95,7 +100,7 @@ const Nav = () => {
                 className="navLink"
                 variant="button"
                 href=""
-                sx={{ my: 1, mx: 1.5 }}
+                sx={{ my: 1, mx: 1.5, color: 'inherit' }}
               >
                 Region
               </Button>
@@ -105,18 +110,51 @@ const Nav = () => {
       </AppBar>
 
       {/* Drawer for Hamburger Menu */}
-      <Drawer anchor="right" open={drawerOpen} onClose={toggleDrawer(false)}>
+      <Drawer
+        anchor="right"
+        open={drawerOpen}
+        onClose={toggleDrawer(false)}
+        PaperProps={{
+          sx: {
+            backgroundColor: '#808080', // Grey background for drawer
+            color: 'white',
+          },
+        }}
+      >
         <List
           onClick={toggleDrawer(false)}
           onKeyDown={toggleDrawer(false)}
           sx={{ width: 250 }}
         >
           {['Novice', 'Intermediary', 'Expert', 'Region'].map((text, index) => (
-            <ListItem key={text} disablePadding>
-              <ListItemButton component={Link} to={`/${text.toLowerCase()}`}>
-                <ListItemText primary={text} />
-              </ListItemButton>
-            </ListItem>
+            <React.Fragment key={text}>
+              <ListItem disablePadding>
+                <ListItemButton
+                  component={Link}
+                  to={`/${text.toLowerCase()}`}
+                  sx={{
+                    '&:hover': { backgroundColor: '#666' }, // Slightly darker grey on hover
+                  }}
+                >
+                  <ListItemText
+                    primary={text}
+                    primaryTypographyProps={{
+                      sx: { color: '#F5A623', fontWeight: 'bold' }, // Gold-colored text
+                    }}
+                  />
+                </ListItemButton>
+              </ListItem>
+              {/* Gold Line Separator */}
+              {index < 3 && (
+                <div
+                  style={{
+                    height: '1px',
+                    backgroundColor: '#F5A623', // Gold separator
+                    margin: '0 16px',
+                  }}
+                ></div>
+              )}
+            </React.Fragment>
           ))}
         </List>
       </Drawer>
