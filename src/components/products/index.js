@@ -149,25 +149,7 @@ const Product = () => {
     className="NewModal"
     fullWidth
     variant="outlined"
-    label="👅"
-    value={modalContent.taste} // Populating from product data
-    placeholder="Describe the taste"
-    sx={{
-      marginBottom: '10px',
-      '& .MuiInputLabel-root': { color: '#F5A623' },  // Golden label color
-      '& .MuiOutlinedInput-root': {
-        '& fieldset': { border: 'none' }, // Remove border
-        '&:hover fieldset': { border: 'none' }, // Remove border on hover
-        '&.Mui-focused fieldset': { border: 'none' }, // Remove border when focused
-        color: '#F5A623', // Golden input text color
-      },
-    }}
-  />
-  <TextField
-    className="NewModal"
-    fullWidth
-    variant="outlined"
-    label="👃"
+    label="Nose 👃"
     value={modalContent.smell} // Populating from product data
     placeholder="Describe the smell"
     sx={{
@@ -185,12 +167,48 @@ const Product = () => {
     className="NewModal"
     fullWidth
     variant="outlined"
-    label="🌍"
+    label="Palate👅"
+    value={modalContent.taste} // Populating from product data
+    placeholder="Describe the taste"
+    sx={{
+      marginBottom: '10px',
+      '& .MuiInputLabel-root': { color: '#F5A623' },  // Golden label color
+      '& .MuiOutlinedInput-root': {
+        '& fieldset': { border: 'none' }, // Remove border
+        '&:hover fieldset': { border: 'none' }, // Remove border on hover
+        '&.Mui-focused fieldset': { border: 'none' }, // Remove border when focused
+        color: '#F5A623', // Golden input text color
+      },
+    }}
+  />
+  <TextField
+    className="NewModal"
+    fullWidth
+    variant="outlined"
+    label="Country 🌍"
     value={modalContent.region} // Populating from product data
     placeholder="Enter the whisky's region"
     sx={{
       marginBottom: '20px',
       '& .MuiInputLabel-root': { color: '#F5A623' },
+      '& .MuiOutlinedInput-root': {
+        '& fieldset': { border: 'none' }, // Remove border
+        '&:hover fieldset': { border: 'none' }, // Remove border on hover
+        '&.Mui-focused fieldset': { border: 'none' }, // Remove border when focused
+        color: '#F5A623', // Golden input text color
+      },
+    }}
+  />
+  <TextField
+    className="NewModal"
+    fullWidth
+    variant="outlined"
+    label="Finish 🏁"
+    value={modalContent.taste} // Populating from product data
+    placeholder="Describe the taste"
+    sx={{
+      marginBottom: '10px',
+      '& .MuiInputLabel-root': { color: '#F5A623' },  // Golden label color
       '& .MuiOutlinedInput-root': {
         '& fieldset': { border: 'none' }, // Remove border
         '&:hover fieldset': { border: 'none' }, // Remove border on hover

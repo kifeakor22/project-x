@@ -24,7 +24,19 @@ function HomeContent() {
         <React.Fragment>
             {/* Hero unit */}
             <Nav />
-
+            <Typography
+  variant="h4"
+  sx={{
+    fontSize: { xs: '1.5rem', sm: '2.5rem', md: '3rem' }, // Adjust font size for small, medium, and large screens
+    textAlign: 'center', // Center the text horizontally
+    display: 'flex', // Use flex to align content
+    justifyContent: 'center', // Horizontally center content
+    alignItems: 'center', // Vertically center content
+  }}
+>
+  <p>Scotch Whisky Gifts - reviewed with passion</p>
+</Typography>
+        
             {/* Hero unit */}
             <Hero />
 
