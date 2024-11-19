@@ -8,8 +8,22 @@
     padding: 20px;
     margin: 5px;
     height: 600px; /* Reduce height by 40% */
-    
+    position: relative; /* Required for positioning the credit text */
 }
+
+.heroGrid::after {
+    content: "Credit: WhiskyFoundation_Jo Hanley"; /* Add the credit text */
+    position: absolute;
+    bottom: 10px; /* Position it at the bottom of the container */
+    right: 10px; /* Align it to the right */
+    font-size: 12px; /* Adjust font size */
+    color: rgba(255, 255, 255, 0.8); /* Subtle white color */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for better readability */
+    padding: 5px 10px; /* Add some padding for the text */
+    border-radius: 5px; /* Round the corners */
+    font-family: Arial, sans-serif; /* Match the design aesthetic */
+}
+
 
 /* Ensure text visibility */
 .heroContent {
