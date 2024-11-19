@@ -167,7 +167,7 @@ const Product = () => {
     className="NewModal"
     fullWidth
     variant="outlined"
-    label="Palate👅"
+    label="Palate 👅"
     value={modalContent.taste} // Populating from product data
     placeholder="Describe the taste"
     sx={{
