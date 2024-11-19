@@ -181,6 +181,24 @@ const Product = () => {
       },
     }}
   />
+   <TextField
+    className="NewModal"
+    fullWidth
+    variant="outlined"
+    label="Finish 🏁"
+    value={modalContent.taste} // Populating from product data
+    placeholder="Describe the taste"
+    sx={{
+      marginBottom: '10px',
+      '& .MuiInputLabel-root': { color: '#F5A623' },  // Golden label color
+      '& .MuiOutlinedInput-root': {
+        '& fieldset': { border: 'none' }, // Remove border
+        '&:hover fieldset': { border: 'none' }, // Remove border on hover
+        '&.Mui-focused fieldset': { border: 'none' }, // Remove border when focused
+        color: '#F5A623', // Golden input text color
+      },
+    }}
+  />
   <TextField
     className="NewModal"
     fullWidth
@@ -199,11 +217,11 @@ const Product = () => {
       },
     }}
   />
-  <TextField
+   <TextField
     className="NewModal"
     fullWidth
     variant="outlined"
-    label="Finish 🏁"
+    label="Region "
     value={modalContent.taste} // Populating from product data
     placeholder="Describe the taste"
     sx={{
@@ -217,6 +235,7 @@ const Product = () => {
       },
     }}
   />
+ 
 </form>
 
             <Button
