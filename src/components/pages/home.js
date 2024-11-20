@@ -15,6 +15,7 @@ import Footer from '../footer';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import BlackFridayPopup from '../sales';
+import Deal from '../deal';
 
 function HomeContent() {
   useEffect(() => {
@@ -116,8 +117,11 @@ function HomeContent() {
         >
           About Us
         </Button>
+        <Deal/>
+       
         <Blog />
       </Container>
+      
       <Product />
 
       {/* End footer */}
