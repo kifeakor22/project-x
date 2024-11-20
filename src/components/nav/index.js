@@ -129,53 +129,54 @@ const Nav = () => {
 
       {/* Drawer for Hamburger Menu */}
       <Drawer
-        anchor="right"
-        open={drawerOpen}
-        onClose={toggleDrawer(false)}
-        PaperProps={{
-          sx: {
-            backgroundColor: '#808080', // Grey background for drawer
-            color: 'white',
-          },
-        }}
-      >
-        <List
-          onClick={toggleDrawer(false)}
-          onKeyDown={toggleDrawer(false)}
-          sx={{ width: 250 }}
-        >
-          {['About us','Blog','Novice', 'Intermediary', 'Expert', 'Region'].map((text, index) => (
-            <React.Fragment key={text}>
-              <ListItem disablePadding>
-                <ListItemButton
-                  component={Link}
-                  to={`/${text.toLowerCase()}`}
-                  sx={{
-                    '&:hover': { backgroundColor: '#666' }, // Slightly darker grey on hover
-                  }}
-                >
-                  <ListItemText
-                    primary={text}
-                    primaryTypographyProps={{
-                      sx: { color: '#F5A623', fontWeight: 'bold' }, // Gold-colored text
-                    }}
-                  />
-                </ListItemButton>
-              </ListItem>
-              {/* Gold Line Separator */}
-              {index < 6 && (
-                <div
-                  style={{
-                    height: '1px',
-                    backgroundColor: '#F5A623', // Gold separator
-                    margin: '0 16px',
-                  }}
-                ></div>
-              )}
-            </React.Fragment>
-          ))}
-        </List>
-      </Drawer>
+  anchor="right"
+  open={drawerOpen}
+  onClose={toggleDrawer(false)}
+  PaperProps={{
+    sx: {
+      backgroundColor: '#808080', // Grey background for drawer
+      color: 'white',
+    },
+  }}
+>
+  <List
+    sx={{ width: 250 }}
+  >
+    {['About us', 'Blog', 'Novice', 'Intermediary', 'Expert', 'Region'].map((text, index) => (
+      <React.Fragment key={text}>
+        <ListItem disablePadding>
+          <ListItemButton
+            onClick={() => {
+              setDrawerOpen(false); // Close the drawer
+              navigate(`/${text.toLowerCase().replace(' ', '-')}`); // Navigate to the correct path
+            }}
+            sx={{
+              '&:hover': { backgroundColor: '#666' }, // Slightly darker grey on hover
+            }}
+          >
+            <ListItemText
+              primary={text}
+              primaryTypographyProps={{
+                sx: { color: '#F5A623', fontWeight: 'bold' }, // Gold-colored text
+              }}
+            />
+          </ListItemButton>
+        </ListItem>
+        {/* Gold Line Separator */}
+        {index < 6 && (
+          <div
+            style={{
+              height: '1px',
+              backgroundColor: '#F5A623', // Gold separator
+              margin: '0 16px',
+            }}
+          ></div>
+        )}
+      </React.Fragment>
+    ))}
+  </List>
+</Drawer>
+
     </>
   );
 };
