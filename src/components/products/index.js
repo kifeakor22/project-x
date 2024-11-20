@@ -186,7 +186,7 @@ const Product = () => {
     fullWidth
     variant="outlined"
     label="Finish 🏁"
-    value={modalContent.taste} // Populating from product data
+    value={modalContent.finish} // Populating from product data
     placeholder="Describe the taste"
     sx={{
       marginBottom: '10px',
@@ -204,7 +204,7 @@ const Product = () => {
     fullWidth
     variant="outlined"
     label="Country 🌍"
-    value={modalContent.region} // Populating from product data
+    value={modalContent.country} // Populating from product data
     placeholder="Enter the whisky's region"
     sx={{
       marginBottom: '20px',
@@ -222,7 +222,7 @@ const Product = () => {
     fullWidth
     variant="outlined"
     label="Region "
-    value={modalContent.taste} // Populating from product data
+    value={modalContent.region} // Populating from product data
     placeholder="Describe the taste"
     sx={{
       marginBottom: '10px',
