@@ -28,7 +28,7 @@ const AboutUs = () => {
         <h1>About Us</h1>
         <p>Welcome to Whiskytopia: A Magical Journey for Every Palate</p>
         <img
-          src={require('./assets/aboutus.jpg')}
+          src={require('./assets/tonyjpg.jpg')}
           alt="Whiskytopia Hero"
           className="hero-image"
         />
