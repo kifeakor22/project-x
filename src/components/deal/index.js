@@ -47,7 +47,7 @@ const Deal = () => {
                 style={{ width: '100%', height: 'auto' }}
               />
               <Typography variant="h6" sx={{ padding: '10px', color: '#333' }}>
-                {product.title}
+                
               </Typography>
             </Box>
           ))}
