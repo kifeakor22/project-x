@@ -25,7 +25,7 @@ const BlackFridayPopup = () => {
       </DialogTitle>
       <DialogContent sx={{ backgroundColor: '#2C2C2C', color: 'white' }}>
         <Typography variant="h6"  sx={{ color: '#F5A623' }}>
-          Huge discounts on Scotch Whisky Gift Sets and bottles! 🥃 🎁 💰
+          Huge discounts on Scotch Whisky Gift Sets and bottles! 🥃 🎁💰
         </Typography>
         <Typography variant="body1" sx={{ marginTop: '10px' }}>
           Don't miss out on our Black Friday deals! Enjoy up to 50% off selected products for a limited time.
