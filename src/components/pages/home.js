@@ -12,6 +12,8 @@ import AOS from 'aos';
 import AboutUsImage from './assets/aboutus.jpg'; // Import your image here
 import Blog from '../blog';
 import Footer from '../footer';
+import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 function HomeContent() {
     useEffect(() => {
@@ -20,10 +22,11 @@ function HomeContent() {
         });
     }, []);
 
+    const navigate = useNavigate();
+
     return (
         <React.Fragment>
             {/* Hero unit */}
-            <Nav />
             <Typography
   variant="h4"
   sx={{
@@ -32,6 +35,7 @@ function HomeContent() {
     display: 'flex', // Use flex to align content
     justifyContent: 'center', // Horizontally center content
     alignItems: 'center', // Vertically center content
+    margin: '5px'
   }}
 >
   <p>Scotch Whisky Gifts - reviewed with passion</p>
@@ -96,7 +100,7 @@ function HomeContent() {
                 </Box>
 
                 {/* Centering the Button on small screens */}
-                <Button
+                <Button onClick={() => navigate('/about-us')}
                     sx={{
                         color: "#F5A623",
                         display: 'block',
@@ -107,13 +111,12 @@ function HomeContent() {
                     size="large"
                     href=""
                     target="_blank"
-                >
-                    About Us
+                > About US
                 </Button>
                 <Blog/>             
             </Container>
             <Product />
-            <Footer/>
+            
             {/* End footer */}
         </React.Fragment>
     );

@@ -1,0 +1,65 @@
+/* Hero Section */
+.hero-section {
+    text-align: center;
+    background-color: #F5A623;
+    color: white;
+    padding: 50px 20px;
+    border-radius: 8px;
+    font-size: 1rem; /* Default font size */
+}
+
+.hero-image {
+    margin-top: 20px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Content Section */
+.content-section {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.category {
+    text-align: center;
+    font-size: larger;
+    margin-bottom: 20px;
+}
+
+.content-image {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-image,
+    .content-image {
+        max-width: 90%;
+    }
+
+    .hero-section {
+        font-size: 1rem; /* Smaller font size for small screens */
+    }
+
+    .category {
+        font-size: 1.5rem; /* Adjust category font size for small screens */
+    }
+}
+
+/* For Larger Screens */
+@media (min-width: 1024px) {
+    .hero-section {
+        font-size: 1.1rem; /* Larger font size for big screens */
+    }
+
+    .category {
+        font-size: 1.5rem; /* Make the category text bigger on large screens */
+    }
+}

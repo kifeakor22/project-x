@@ -14,6 +14,7 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
+import { useNavigate } from 'react-router-dom';
 
 const Nav = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -29,7 +30,7 @@ const Nav = () => {
     }
     setDrawerOpen(open);
   };
-
+  const navigate = useNavigate();
   return (
     <>
       <AppBar
@@ -39,13 +40,13 @@ const Nav = () => {
         className="navigation"
       >
         <Toolbar sx={{ flexWrap: 'wrap' }}>
-          <img
+          <img onClick={() => navigate('/')}
             src={require('../products/assets/logo.jpg')}
             alt="company logo"
             style={{ marginRight: '10px' }}
           />
 
-          <Typography
+          <Typography onClick={() => navigate('/')}
             className="navLink"
             variant="h6"
             noWrap
@@ -72,6 +73,15 @@ const Nav = () => {
           ) : (
             // Show Navigation Links on Larger Screens
             <nav>
+               <Button  onClick={() => navigate('/about-us')}
+                className="navLink"
+                variant="button"
+                href=""
+                sx={{ my: 1, mx: 1.5, color: 'inherit' }}
+              >
+                About us
+              </Button>
+              
                <Button
                 className="navLink"
                 variant="button"
@@ -134,7 +144,7 @@ const Nav = () => {
           onKeyDown={toggleDrawer(false)}
           sx={{ width: 250 }}
         >
-          {['Blog','Novice', 'Intermediary', 'Expert', 'Region'].map((text, index) => (
+          {['About us','Blog','Novice', 'Intermediary', 'Expert', 'Region'].map((text, index) => (
             <React.Fragment key={text}>
               <ListItem disablePadding>
                 <ListItemButton
@@ -153,7 +163,7 @@ const Nav = () => {
                 </ListItemButton>
               </ListItem>
               {/* Gold Line Separator */}
-              {index < 3 && (
+              {index < 6 && (
                 <div
                   style={{
                     height: '1px',
