@@ -38,6 +38,7 @@ const Deal = () => {
                 overflow: 'hidden',
                 textAlign: 'center',
                 backgroundColor: 'white',
+                margin: '5px'
               }}
               onClick={() => handleModalOpen(product)}
             >
