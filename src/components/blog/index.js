@@ -1,78 +1,111 @@
 import React, { useState } from 'react';
-import { Box, Typography, Card, CardMedia, CardContent, Button } from '@mui/material';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
+import { Box, Typography, Card, CardMedia, CardContent, Button, Container } from '@mui/material';
 import { styled } from '@mui/system';
 import blogs from '../../blog.json';
 
-// Styled Card for the Blog Post
+// Styled Card Component
 const BlogCard = styled(Card)(({ theme }) => ({
   maxWidth: '100%',
   margin: '20px auto',
   overflow: 'hidden',
-  backgroundColor: 'transparent',
-  transition: 'transform 0.3s ease',
+  borderRadius: '16px',
+  boxShadow: '0px 8px 16px rgba(0, 0, 0, 0.2)',
+  transition: 'transform 0.3s ease, box-shadow 0.3s ease',
   '&:hover': {
-    transform: 'scale(1.02)',
+    transform: 'scale(1.05)',
+    boxShadow: '0px 12px 24px rgba(0, 0, 0, 0.3)',
   },
 }));
 
-// BlogPostTemplate component that shows the full blog post when "Read More" is clicked
-const BlogPostTemplate = ({ title, date, readTime, image, content }) => {
+const BlogPostTemplate = ({ title, date, readTime, image, content, highlight, post }) => {
   const [showDetails, setShowDetails] = useState(false);
 
-  // Toggle full content visibility
   const handleReadMoreClick = () => {
     setShowDetails(!showDetails);
   };
 
+  // Custom renderer for images
+  const renderers = {
+    img: ({ src, alt }) => {
+      // Resolve image path for assets in 'assets' folder
+      const imagePath = src.startsWith('./assets/') ? require(`${src}`).default : src;
+      return <img src={imagePath} alt={alt} style={{ maxWidth: '100%', borderRadius: '8px' }} />;
+    },
+  };
+
   return (
-    <BlogCard>
-      {/* Image with Responsive Sizing */}
+    <BlogCard
+      sx={{
+        backgroundColor: highlight ? '#F5A623' : '#FFF',
+        color: highlight ? '#FFF' : '#333',
+        transition: 'all 0.3s ease-in-out',
+      }}
+    >
       <CardMedia
         component="img"
-        image={image}
+        image={require(`./assets/${image}`)} // Ensure images in 'assets' folder are properly referenced
         alt={title}
         sx={{
-          width: '100%',
-          height: '400px',
+          height: { xs: '250px', sm: '400px' },
           objectFit: 'cover',
-          objectPosition: 'center',
-          filter: 'brightness(0.9)',
-          '@media (max-width: 600px)': {
-            height: '250px',
-          },
+          filter: highlight ? 'brightness(0.8)' : 'brightness(1)',
         }}
       />
-
-      {/* Blog Title, Date, and Read More Button */}
-      <CardContent sx={{ textAlign: 'center', padding: '20px' }}>
-        <Typography variant="h5" component="h2" color="#F5A623" gutterBottom>
+      <CardContent sx={{ padding: '20px', textAlign: 'center' }}>
+        <Typography
+          variant="h5"
+          component="h2"
+          sx={{
+            fontWeight: 'bold',
+            mb: 1,
+            color: highlight ? '#FFF' : '#F5A623',
+          }}
+        >
           {title}
         </Typography>
-        <Typography variant="body2" color="#ccc">
+        <Typography variant="body2" sx={{ color: highlight ? '#FFF' : '#666', mb: 2 }}>
           {date} • {readTime}
         </Typography>
-
-        {/* Toggle between showing preview and full content */}
-        {showDetails ? (
-          <Typography variant="body1" color="#F5A623" sx={{ marginTop: '10px' }}>
-            {content}
-          </Typography>
-        ) : (
-          <Typography variant="body2" color="#F5A623" sx={{ marginTop: '10px', maxHeight: '60px', overflow: 'hidden', textOverflow: 'ellipsis' }}>
-            {content.slice(0, 100)}...
-          </Typography>
+        <Typography
+          variant="body2"
+          sx={{
+            mb: 3,
+            lineHeight: 1.6,
+            maxHeight: showDetails ? 'none' : '100px',
+            overflow: showDetails ? 'visible' : 'hidden',
+            textOverflow: 'ellipsis',
+          }}
+        >
+          {content}
+        </Typography>
+        {showDetails && (
+          <Box
+            sx={{
+              mt: 3,
+              textAlign: 'left',
+              whiteSpace: 'pre-wrap',
+              color: highlight ? '#FFF' : '#333',
+            }}
+          >
+            <ReactMarkdown
+              children={post}
+              remarkPlugins={[remarkGfm]}
+              components={renderers} // Use custom renderer for images
+            />
+          </Box>
         )}
-
         <Button
           variant="contained"
-          color="primary"
-          onClick={handleReadMoreClick}
           sx={{
-            marginTop: '10px',
-            color: '#FFF',
-            backgroundColor: '#FFA500',
-            '&:hover': { backgroundColor: '#FF8C00' },
+            mt: 2,
+            backgroundColor: highlight ? '#333' : '#F5A623',
+            color: highlight ? '#FFF' : '#FFF',
+            fontWeight: 'bold',
+            '&:hover': { backgroundColor: highlight ? '#555' : '#FF8C00' },
           }}
+          onClick={handleReadMoreClick}
         >
           {showDetails ? 'Show Less' : 'Read More'}
         </Button>
@@ -81,23 +114,36 @@ const BlogPostTemplate = ({ title, date, readTime, image, content }) => {
   );
 };
 
-// Parent component that maps over blog data from JSON
 const BlogList = () => {
   return (
-    <div>
-      {blogs.map((post, index) => (
-        <BlogPostTemplate
-          key={index}
-          title={post.title}
-          date={post.date}
-          readTime={post.readTime}
-          image={require(`./assets/${post.image.replace("require('./assets/", "").replace("')", "")}`)} // Adjust path for image import
-          content={post.content}
-        />
-      ))}
-    </div>
+    <Container maxWidth="lg" sx={{ py: 5 }}>
+      <Typography
+        variant="h3"
+        sx={{
+          fontWeight: 'bold',
+          textAlign: 'center',
+          mb: 5,
+          color: '#F5A623',
+        }}
+      >
+        Whisky Advent Calendars
+      </Typography>
+      <Box sx={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
+        {blogs.map((post, index) => (
+          <BlogPostTemplate
+            key={index}
+            title={post.title}
+            date={post.date}
+            readTime={post.readTime}
+            image={post.image}
+            content={post.content}
+            post={post.post} // Pass the post field
+            highlight={index === 0} // Highlight the first post
+          />
+        ))}
+      </Box>
+    </Container>
   );
 };
 
 export default BlogList;
-
