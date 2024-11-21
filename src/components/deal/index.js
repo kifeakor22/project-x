@@ -1,6 +1,14 @@
 import React, { useState } from 'react';
-import { Dialog, DialogActions, DialogContent, DialogTitle, Button, Typography, Box } from '@mui/material';
-import products from '../../products.json'; // Importing product data from JSON
+import {
+  Dialog,
+  DialogActions,
+  DialogContent,
+  DialogTitle,
+  Button,
+  Typography,
+  Box,
+} from '@mui/material';
+import products from '../../products.json';
 
 const Deal = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -19,72 +27,167 @@ const Deal = () => {
   return (
     <div>
       {/* Gold Background Section */}
-      <div style={{ backgroundColor: '#F5A623', padding: '50px 0' }}>
-        <Typography variant="h4" sx={{ textAlign: 'center', color: 'black' }}>
+      <Box
+        sx={{
+          backgroundColor: '#F5A623',
+          padding: { xs: '30px 10px', md: '50px 0' },
+          textAlign: 'center',
+        }}
+      >
+        <Typography
+          variant="h3"
+          sx={{
+            color: 'black',
+            fontWeight: 'bold',
+            textTransform: 'uppercase',
+            mb: 3,
+            animation: 'fadeIn 1s ease-in-out',
+          }}
+        >
           Black Friday Deals
         </Typography>
-        <div style={{ display: 'flex', justifyContent: 'center', gap: '30px', marginTop: '30px' }}>
+        <Box
+          sx={{
+            display: 'flex',
+            flexWrap: 'wrap',
+            justifyContent: 'center',
+            gap: '30px',
+          }}
+        >
           {products.slice(0, 3).map((product) => (
             <Box
               key={product.id}
+              onClick={() => handleModalOpen(product)}
               sx={{
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-                width: '200px',
+                width: { xs: '100%', sm: '250px' },
                 cursor: 'pointer',
                 boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.2)',
-                borderRadius: '8px',
+                borderRadius: '10px',
                 overflow: 'hidden',
                 textAlign: 'center',
                 backgroundColor: 'white',
-                margin: '5px'
+                transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+                '&:hover': {
+                  transform: 'scale(1.05)',
+                  boxShadow: '0px 6px 12px rgba(0, 0, 0, 0.3)',
+                },
               }}
-              onClick={() => handleModalOpen(product)}
             >
               <img
                 src={process.env.PUBLIC_URL + product.image}
                 alt={product.alt}
                 style={{ width: '100%', height: 'auto' }}
               />
-              <Typography variant="h6" sx={{ padding: '10px', color: '#333' }}>
-                
+              <Typography
+                variant="h6"
+                sx={{
+                  padding: '10px',
+                  color: '#333',
+                  fontWeight: 'bold',
+                }}
+              >
+                {product.title}
+              </Typography>
+              <Typography
+                variant="body2"
+                sx={{ color: '#777', paddingBottom: '10px' }}
+              >
+                {product.description}
               </Typography>
             </Box>
           ))}
-        </div>
-      </div>
+        </Box>
+      </Box>
 
       {/* Darker Shade Section */}
-      <div style={{ backgroundColor: '#333', color: 'white', padding: '50px 0' }}>
-        <Typography variant="h4" sx={{ textAlign: 'center' }}>
+      <Box
+        sx={{
+          backgroundColor: '#2C2C2C',
+          color: 'white',
+          padding: { xs: '30px 10px', md: '50px 0' },
+          textAlign: 'center',
+          mt: 2,
+        }}
+      >
+        <Typography
+          variant="h3"
+          sx={{
+            fontWeight: 'bold',
+            mb: 2,
+            animation: 'slideIn 1s ease-in-out',
+          }}
+        >
           Treat Yourself
         </Typography>
-        <Typography variant="body1" sx={{ textAlign: 'center', marginTop: '20px' }}>
-          Discover exclusive offers on premium whisky, handpicked for you.
+        <Typography variant="body1" sx={{ maxWidth: '600px', mx: 'auto' }}>
+          Discover exclusive offers on premium whisky, handpicked just for you.
         </Typography>
-      </div>
+      </Box>
 
       {/* Modal Pop-Up */}
-      <Dialog open={modalOpen} onClose={handleModalClose}>
-        <DialogTitle sx={{ backgroundColor: '#F5A623', color: 'white' }}>
+      <Dialog
+        open={modalOpen}
+        onClose={handleModalClose}
+        sx={{
+          '& .MuiDialog-paper': {
+            borderRadius: '20px',
+            backgroundColor: '#2C2C2C',
+            color: 'white',
+          },
+        }}
+      >
+        <DialogTitle
+          sx={{
+            backgroundColor: '#F5A623',
+            color: 'black',
+            fontWeight: 'bold',
+            textAlign: 'center',
+          }}
+        >
           {modalContent.title}
         </DialogTitle>
-        <DialogContent sx={{ backgroundColor: '#2C2C2C', color: 'white' }}>
-          <Typography variant="body1">{modalContent.review}</Typography>
+        <DialogContent>
+          <Typography
+            variant="body1"
+            sx={{
+              mb: 3,
+              lineHeight: 1.8,
+            }}
+          >
+            {modalContent.review}
+          </Typography>
         </DialogContent>
-        <DialogActions sx={{ backgroundColor: '#F5A623' }}>
+        <DialogActions
+          sx={{
+            justifyContent: 'center',
+            pb: 2,
+            backgroundColor: '#F5A623',
+          }}
+        >
           <Button
-            sx={{ color: 'white', backgroundColor: 'black' }}
             variant="contained"
             href={modalContent.link}
             target="_blank"
             rel="noopener noreferrer"
-            
+            sx={{
+              backgroundColor: 'black',
+              color: 'white',
+              fontWeight: 'bold',
+              textTransform: 'uppercase',
+              '&:hover': {
+                backgroundColor: '#444',
+              },
+            }}
           >
             Buy Now
           </Button>
-          <Button onClick={handleModalClose} sx={{ color: 'white' }}>
+          <Button
+            onClick={handleModalClose}
+            sx={{
+              color: 'black',
+              fontWeight: 'bold',
+            }}
+          >
             Close
           </Button>
         </DialogActions>
