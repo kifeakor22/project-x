@@ -135,121 +135,172 @@ const Product = () => {
       </Slider>
 
       {modalOpen && (
-        <div className="modal">
-          <div className="modal-content">
-            <span className="close" onClick={handleModalClose}>
-              &times;
-            </span>
-            <h2>{modalContent.title}</h2>
-            <p>{modalContent.description}</p>
-            <p>{modalContent.review}</p>
-            <form>
-  {/* Populating form with product data */}
-  <TextField
-    className="NewModal"
-    fullWidth
-    variant="outlined"
-    label="Nose 👃"
-    value={modalContent.smell} // Populating from product data
-    placeholder="Describe the smell"
-    sx={{
-      marginBottom: '10px',
-      '& .MuiInputLabel-root': { color: '#F5A623' },
-      '& .MuiOutlinedInput-root': {
-        '& fieldset': { border: 'none' }, // Remove border
-        '&:hover fieldset': { border: 'none' }, // Remove border on hover
-        '&.Mui-focused fieldset': { border: 'none' }, // Remove border when focused
-        color: '#F5A623', // Golden input text color
-      },
+  <div
+    style={{
+      position: 'fixed',
+      top: 0,
+      left: 0,
+      width: '100vw',
+      height: '100vh',
+      backgroundColor: 'rgba(0, 0, 0, 0.5)', // Semi-transparent overlay
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      zIndex: 1000,
     }}
-  />
-  <TextField
-    className="NewModal"
-    fullWidth
-    variant="outlined"
-    label="Palate 👅"
-    value={modalContent.taste} // Populating from product data
-    placeholder="Describe the taste"
-    sx={{
-      marginBottom: '10px',
-      '& .MuiInputLabel-root': { color: '#F5A623' },  // Golden label color
-      '& .MuiOutlinedInput-root': {
-        '& fieldset': { border: 'none' }, // Remove border
-        '&:hover fieldset': { border: 'none' }, // Remove border on hover
-        '&.Mui-focused fieldset': { border: 'none' }, // Remove border when focused
-        color: '#F5A623', // Golden input text color
-      },
-    }}
-  />
-   <TextField
-    className="NewModal"
-    fullWidth
-    variant="outlined"
-    label="Finish 🏁"
-    value={modalContent.finish} // Populating from product data
-    placeholder="Describe the taste"
-    sx={{
-      marginBottom: '10px',
-      '& .MuiInputLabel-root': { color: '#F5A623' },  // Golden label color
-      '& .MuiOutlinedInput-root': {
-        '& fieldset': { border: 'none' }, // Remove border
-        '&:hover fieldset': { border: 'none' }, // Remove border on hover
-        '&.Mui-focused fieldset': { border: 'none' }, // Remove border when focused
-        color: '#F5A623', // Golden input text color
-      },
-    }}
-  />
-  <TextField
-    className="NewModal"
-    fullWidth
-    variant="outlined"
-    label="Country 🌍"
-    value={modalContent.country} // Populating from product data
-    placeholder="Enter the whisky's region"
-    sx={{
-      marginBottom: '20px',
-      '& .MuiInputLabel-root': { color: '#F5A623' },
-      '& .MuiOutlinedInput-root': {
-        '& fieldset': { border: 'none' }, // Remove border
-        '&:hover fieldset': { border: 'none' }, // Remove border on hover
-        '&.Mui-focused fieldset': { border: 'none' }, // Remove border when focused
-        color: '#F5A623', // Golden input text color
-      },
-    }}
-  />
-   <TextField
-    className="NewModal"
-    fullWidth
-    variant="outlined"
-    label="Region "
-    value={modalContent.region} // Populating from product data
-    placeholder="Describe the taste"
-    sx={{
-      marginBottom: '10px',
-      '& .MuiInputLabel-root': { color: '#F5A623' },  // Golden label color
-      '& .MuiOutlinedInput-root': {
-        '& fieldset': { border: 'none' }, // Remove border
-        '&:hover fieldset': { border: 'none' }, // Remove border on hover
-        '&.Mui-focused fieldset': { border: 'none' }, // Remove border when focused
-        color: '#F5A623', // Golden input text color
-      },
-    }}
-  />
- 
-</form>
+  >
+    <div
+      style={{
+        backgroundColor: '#F5A623', // Golden background
+        borderRadius: '12px',
+        maxWidth: '500px',
+        width: '90%',
+        padding: '20px',
+        boxShadow: '0 4px 20px rgba(0, 0, 0, 0.2)',
+        position: 'relative',
+        overflowY: 'auto', // Enable scrolling for smaller devices
+        maxHeight: '90vh', // Ensure content doesn't overflow the screen
+      }}
+    >
+      {/* Close Button */}
+      <span
+        onClick={handleModalClose}
+        style={{
+          position: 'absolute',
+          top: '10px',
+          right: '15px',
+          fontSize: '24px',
+          cursor: 'pointer',
+          color: '#FFF',
+          fontWeight: 'bold',
+        }}
+      >
+        &times;
+      </span>
 
-            <Button
-                sx={{ color: '#F5A623' }}
-                variant="contained"
-                className="projectBtn"
-                size="small"
-                href={modalContent.link}
-                target="_blank"
-                rel="noopener noreferrer"
-              >Buy Now</Button>
-          </div>
-        </div>
-      )}
+      {/* Modal Content */}
+      <Typography
+        variant="h5"
+        sx={{
+          textAlign: 'center',
+          marginBottom: '15px',
+          color: '#FFF',
+          fontSize: { xs: '1.2rem', sm: '1.5rem' }, // Responsive font size
+        }}
+      >
+        {modalContent.title}
+      </Typography>
+      <Typography
+        variant="body1"
+        sx={{
+          marginBottom: '15px',
+          color: '#FFF',
+          textAlign: 'center',
+          fontSize: { xs: '0.9rem', sm: '1rem' },
+        }}
+      >
+        {modalContent.description}
+      </Typography>
+
+      {/* Responsive Image */}
+      <img
+        src={require(`${modalContent.image}`)}
+        alt={modalContent.title}
+        style={{
+          width: '100%',
+          maxWidth: '300px', // Limit image size
+          height: 'auto',
+          borderRadius: '8px',
+          display: 'block',
+          margin: '0 auto 20px',
+          boxShadow: '0 4px 10px rgba(0, 0, 0, 0.1)',
+        }}
+      />
+
+      <Typography
+        variant="body2"
+        sx={{
+          marginBottom: '15px',
+          color: '#FFF',
+          fontSize: { xs: '0.85rem', sm: '1rem' },
+        }}
+      >
+        {modalContent.review}
+      </Typography>
+
+      {/* Responsive Form */}
+      <form>
+        <TextField
+          fullWidth
+          variant="outlined"
+          label="Nose 👃"
+          value={modalContent.smell || ''}
+          sx={{
+            marginBottom: '10px',
+            '& .MuiInputLabel-root': { color: '#FFF' },
+            '& .MuiOutlinedInput-root': {
+              '& fieldset': { border: 'none' },
+              '&:hover fieldset': { border: 'none' },
+              '&.Mui-focused fieldset': { border: 'none' },
+              color: '#FFF',
+            },
+          }}
+        />
+        <TextField
+          fullWidth
+          variant="outlined"
+          label="Palate 👅"
+          value={modalContent.taste || ''}
+          sx={{
+            marginBottom: '10px',
+            '& .MuiInputLabel-root': { color: '#FFF' },
+            '& .MuiOutlinedInput-root': {
+              '& fieldset': { border: 'none' },
+              '&:hover fieldset': { border: 'none' },
+              '&.Mui-focused fieldset': { border: 'none' },
+              color: '#FFF',
+            },
+          }}
+        />
+        <TextField
+          fullWidth
+          variant="outlined"
+          label="Finish 🏁"
+          value={modalContent.finish || ''}
+          sx={{
+            marginBottom: '10px',
+            '& .MuiInputLabel-root': { color: '#FFF' },
+            '& .MuiOutlinedInput-root': {
+              '& fieldset': { border: 'none' },
+              '&:hover fieldset': { border: 'none' },
+              '&.Mui-focused fieldset': { border: 'none' },
+              color: '#FFF',
+            },
+          }}
+        />
+      </form>
+
+      {/* Responsive Button */}
+      <Button
+        variant="contained"
+        sx={{
+          width: '100%',
+          backgroundColor: '#333',
+          color: '#FFF',
+          '&:hover': { backgroundColor: '#555' },
+          fontSize: { xs: '0.9rem', sm: '1rem' },
+          padding: { xs: '8px 12px', sm: '10px 20px' },
+        }}
+        href={modalContent.link}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Buy Now
+      </Button>
+    </div>
+  </div>
+)}
+
     </div>
   );
 };

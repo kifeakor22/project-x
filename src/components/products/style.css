@@ -85,3 +85,59 @@
   .NewModal {
     color: #ff9800;
   }
+
+  .modal-content {
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.modal-content {
+  background-color: #F5A623; /* Golden background */
+  border-radius: 12px;
+  max-width: 500px;
+  width: 90%;
+  padding: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow-y: auto;
+  max-height: 90vh;
+}
+
+.modal-content img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 600px) {
+  .modal-content {
+    padding: 15px;
+    max-width: 90%;
+  }
+
+  .modal-content h2 {
+    font-size: 1.2rem;
+  }
+
+  .modal-content p {
+    font-size: 0.9rem;
+  }
+
+  .modal-content button {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
+}
