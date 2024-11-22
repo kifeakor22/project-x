@@ -74,7 +74,7 @@ function HomeContent() {
           <Box sx={{ maxWidth: '100%' }}>
             <Typography variant="h4"
               sx={{
-                color: '#333',
+                color: '#655',
                 fontSize: { xs: '1.5rem', sm: '2.5rem', md: '3rem', } 
                 // Adjust font size for small, medium, and large screens
               }}>
