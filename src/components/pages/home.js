@@ -41,6 +41,9 @@ function HomeContent() {
           justifyContent: 'center', // Horizontally center content
           alignItems: 'center', // Vertically center content
           margin: '5px',
+          color: '#655',
+          
+
         }}
       >
         <p>Scotch Whisky Gifts - reviewed with passion</p>
@@ -54,6 +57,7 @@ function HomeContent() {
         <Box
           className="aboutUs"
           sx={{
+            fontWeight: 'bold',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'space-between',
@@ -70,7 +74,9 @@ function HomeContent() {
           <Box sx={{ maxWidth: '100%' }}>
             <Typography variant="h4"
               sx={{
-                fontSize: { xs: '1.5rem', sm: '2.5rem', md: '3rem' } // Adjust font size for small, medium, and large screens
+                color: '#333',
+                fontSize: { xs: '1.5rem', sm: '2.5rem', md: '3rem', } 
+                // Adjust font size for small, medium, and large screens
               }}>
               <p>Lets start the journey</p>
             </Typography>
