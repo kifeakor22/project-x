@@ -82,7 +82,7 @@ const Nav = () => {
                 About us
               </Button>
               
-               <Button
+               <Button onClick={() => navigate('/blog')}
                 className="navLink"
                 variant="button"
                 href=""

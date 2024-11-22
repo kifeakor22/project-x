@@ -6,6 +6,7 @@ import Product from './components/products';
 import AboutUs from './components/about';
 import Nav from './components/nav';
 import Footer from './components/footer';
+import BlogList from './components/blog';
 
 import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
@@ -24,6 +25,7 @@ function App() {
           <Route path='/' element= {<Home/>}></Route>
            <Route path="/product" element={<Product/>}></Route>
            <Route path="/about-us" element={<AboutUs />} />
+           <Route path='/blog' element={<BlogList />} />
       </Routes>
       <Footer/>
       </div>
