@@ -41,7 +41,7 @@ function HomeContent() {
           justifyContent: 'center', // Horizontally center content
           alignItems: 'center', // Vertically center content
           margin: '5px',
-          color: '#655',
+          color: 'rgb(153, 153, 153)',
           
 
         }}
@@ -74,7 +74,7 @@ function HomeContent() {
           <Box sx={{ maxWidth: '100%' }}>
             <Typography variant="h4"
               sx={{
-                color: '#655',
+                color: 'rgb(153, 153, 153)',
                 fontSize: { xs: '1.5rem', sm: '2.5rem', md: '3rem', } 
                 // Adjust font size for small, medium, and large screens
               }}>
