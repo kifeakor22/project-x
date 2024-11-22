@@ -28,26 +28,26 @@ const Footer = () => {
   }, []);
 
   return (
-    <Box component="footer" sx={{ backgroundColor: "#2c2c2c", color: "#ffffff", py: 4 }}>
+    <Box component="footer" sx={{ backgroundColor: "#2c2c2c", color: '#655', py: 4 }}>
       <Container maxWidth="lg">
         <Grid container spacing={4}>
           {/* Left Section */}
           <Grid item xs={12} sm={6}>
-            <Typography variant="h6" gutterBottom sx={{ fontWeight: "bold" }}>
+            <Typography variant="h6" gutterBottom sx={{ fontWeight: "bold", color: '#655' }}>
               whiskytopia.co.uk
             </Typography>
-            <Typography variant="body2" sx={{ color: "#ccc" }}>
+            <Typography variant="body2" sx={{ color: '#655' }}>
               Explore the finest whiskies from around the world. Join us for reviews, guides, and more.
             </Typography>
           </Grid>
 
           {/* Right Section */}
           <Grid item xs={12} sm={6}>
-            <Typography variant="body2" sx={{ mb: 1 }}>
+            <Typography variant="body2" sx={{ mb: 1, color: '#655' }}>
               {currentDate}
             </Typography>
-            <Typography variant="body2">London, United Kingdom</Typography>
-            <Typography variant="body2">📞 Contact us: +44 7807 886 318</Typography>
+            <Typography sx={{ color: '#655' }} variant="body2">London, United Kingdom</Typography>
+            <Typography sx={{ color: '#655' }} variant="body2">📞 Contact us: +44 7807 886 318</Typography>
             <Box mt={2}>
               <WhatsAppWidget
                 phoneNumber="+447807886318"
