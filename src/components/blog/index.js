@@ -4,6 +4,8 @@ import remarkGfm from 'remark-gfm';
 import { Box, Typography, Card, CardMedia, CardContent, Button, Container } from '@mui/material';
 import { styled } from '@mui/system';
 import blogs from '../../blog.json';
+import aImage from './assets/a.jpg';  // Import the image directly
+
 
 // Styled Card Component
 const BlogCard = styled(Card)(({ theme }) => ({
@@ -29,9 +31,9 @@ const BlogPostTemplate = ({ title, date, readTime, image, content, highlight, po
   // Custom renderer for images
   const renderers = {
     img: ({ src, alt }) => {
-      // Resolve image path for assets in 'assets' folder
-      const imagePath = src.startsWith('./assets/') ? require(`${src}`).default : src;
-      return <img src={imagePath} alt={alt} style={{ maxWidth: '100%', borderRadius: '8px' }} />;
+      // Manually resolve the path for known images
+      const imagePath = src === './assets/a.jpg' ? aImage : src; // Add more conditions for other images
+      return <img src={imagePath} alt={alt} style={{ maxWidth: '100%', borderRadius: '8px',width: '80%',height: 'auto', }} />;
     },
   };
 
@@ -76,6 +78,7 @@ const BlogPostTemplate = ({ title, date, readTime, image, content, highlight, po
             maxHeight: showDetails ? 'none' : '100px',
             overflow: showDetails ? 'visible' : 'hidden',
             textOverflow: 'ellipsis',
+            
           }}
         >
           {content}
@@ -84,9 +87,10 @@ const BlogPostTemplate = ({ title, date, readTime, image, content, highlight, po
           <Box
             sx={{
               mt: 3,
+              fontSize: 'larger',
               textAlign: 'left',
               whiteSpace: 'pre-wrap',
-              color: highlight ? '#FFF' : '#333',
+               color: '#655'
             }}
           >
             <ReactMarkdown
@@ -128,7 +132,7 @@ const BlogList = () => {
       >
         Whisky Advent Calendars
       </Typography>
-      <Box sx={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
+      <Box sx={{ display: 'flex', flexDirection: 'column', gap: 4, }}>
         {blogs.map((post, index) => (
           <BlogPostTemplate
             key={index}
