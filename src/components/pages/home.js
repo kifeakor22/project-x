@@ -29,7 +29,7 @@ function HomeContent() {
   return (
     <React.Fragment>
       {/* Black Friday Popup */}
-      <BlackFridayPopup /> {/* This will show the popup on page load */}
+       {/* This will show the popup on page load */}
 
       {/* Hero unit */}
       <Typography
