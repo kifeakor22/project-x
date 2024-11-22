@@ -1,21 +1,5 @@
 [
-  {
-    "id": 0,
- "title": "Talisker Distillers Edition Whisky",
- "description": "Scotch Whisky • 70cl • 45.8%",
-"image":"./assets/taliska.jpg", 
-"alt":"Whisky",
-"price": "35.90",
-"review": "A very lovely whisky indeed. One of WT’s favourite producers. Very smooth and easy to drink despite the distillers edition 45.8% strength. It's full bodied, with enough fruity background and very satisfying to drink. Bit sweeter than standard 10Yr Old. This is a very versatile whisky, it works any time for any occasion. The smoke and the sherry blend perfectly. Highly enjoyable. Deceptively moreish......",
-"link"  : "https://scripts.affiliatefuture.com/AFShortUrl.aspx?id=43055",
-"taste": "Peaty, peppery spice, dates and a classic touch of sea salt",
-"smell": "Salty sea spray, bonfires, and raisin-like sweetness.",
-"finish": "Drying oak and lingering smoke.",
-"country": "Scotland",
-"region": "󠁧Island"
-
-   
-},
+  
 {
   "id": 1,
 "title": "Tobermory 12 Year Old Whisky 70cl",
