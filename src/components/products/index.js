@@ -89,7 +89,7 @@ const Product = () => {
             sx={{
               boxShadow: '',
               width: '300px',
-              height: '400px',
+              height: 'auto',
               margin: '10px',
               display: 'flex',
               flexDirection: 'column',
@@ -127,7 +127,7 @@ const Product = () => {
                 onClick={() => handleModalOpen(product)}
                 className="goldenBtn"
                 src={require('./assets/goldenBtn.png')}
-                style={{ width: '60px', cursor: 'pointer' }}
+                style={{ width: '100px', cursor: 'pointer' }}
               />
             </CardActions>
           </Card>
