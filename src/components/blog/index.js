@@ -38,7 +38,6 @@ const BlogPostTemplate = ({ title, date, readTime, image, content, highlight, po
     img: ({ src, alt }) => {
       console.log(`Resolving image: ${src}`); // Debugging path resolution
       const resolvedImage = imageMap[src] || src; // Resolve the image path or fallback to raw source
-      console.log(`Resolved to: ${resolvedImage}`); // Verify the resolved path
 
       return (
         <img
