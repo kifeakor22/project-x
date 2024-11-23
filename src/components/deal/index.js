@@ -147,6 +147,21 @@ const Deal = () => {
           {modalContent.title}
         </DialogTitle>
         <DialogContent>
+        {modalContent.image && (
+      <img
+        src={process.env.PUBLIC_URL + modalContent.image}
+        alt={modalContent.alt || 'Product Image'}
+        style={{
+            width: '100%',
+            maxWidth: '300px', // Limit image size
+            height: 'auto',
+            borderRadius: '8px',
+            display: 'block',
+            margin: '0 auto 20px',
+            boxShadow: '0 4px 10px rgba(0, 0, 0, 0.1)',
+          }}
+      />
+    )}
           <Typography
             variant="body1"
             sx={{
@@ -154,6 +169,7 @@ const Deal = () => {
               lineHeight: 1.8,
             }}
           >
+            
             {modalContent.review}
           </Typography>
         </DialogContent>
