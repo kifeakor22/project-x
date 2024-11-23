@@ -107,7 +107,7 @@ const Product = () => {
                 marginTop: '10px',
               }}
             />
-            <CardContent sx={{ textAlign: 'center' }}>
+            <CardContent sx={{ textAlign: 'center', color: 'black' }}>
               <Typography gutterBottom variant="h5" component="div">
                 {product.title}
               </Typography>
