@@ -4,10 +4,9 @@ import remarkGfm from 'remark-gfm';
 import { Box, Typography, Card, CardMedia, CardContent, Button, Container } from '@mui/material';
 import { styled } from '@mui/system';
 import blogs from '../../blog.json';
-import aImage from './assets/a.jpg';  // Import the image directly
+import aImage from './assets/a.jpg'; // Import the images directly
+import bImage from './assets/b.jpg';
 
-
-// Styled Card Component
 const BlogCard = styled(Card)(({ theme }) => ({
   maxWidth: '100%',
   margin: '20px auto',
@@ -28,12 +27,31 @@ const BlogPostTemplate = ({ title, date, readTime, image, content, highlight, po
     setShowDetails(!showDetails);
   };
 
-  // Custom renderer for images
+  // Image mapping for dynamic resolution
+  const imageMap = {
+    './assets/a.jpg': aImage,
+    './assets/b.jpg': bImage, // Ensure the image is mapped
+    // Add more mappings if necessary
+  };
+
   const renderers = {
     img: ({ src, alt }) => {
-      // Manually resolve the path for known images
-      const imagePath = src === './assets/a.jpg' ? aImage : src; // Add more conditions for other images
-      return <img src={imagePath} alt={alt} style={{ maxWidth: '100%', borderRadius: '8px',width: '80%',height: 'auto', }} />;
+      console.log(`Resolving image: ${src}`); // Debugging path resolution
+      const resolvedImage = imageMap[src] || src; // Resolve the image path or fallback to raw source
+      console.log(`Resolved to: ${resolvedImage}`); // Verify the resolved path
+
+      return (
+        <img
+          src={resolvedImage}
+          alt={alt}
+          style={{
+            maxWidth: '100%',
+            borderRadius: '8px',
+            width: '80%',
+            height: 'auto',
+          }}
+        />
+      );
     },
   };
 
@@ -47,7 +65,7 @@ const BlogPostTemplate = ({ title, date, readTime, image, content, highlight, po
     >
       <CardMedia
         component="img"
-        image={require(`./assets/${image}`)} // Ensure images in 'assets' folder are properly referenced
+        image={require(`./assets/${image}`)} // Ensure images are properly referenced
         alt={title}
         sx={{
           height: { xs: '250px', sm: '400px' },
@@ -78,7 +96,6 @@ const BlogPostTemplate = ({ title, date, readTime, image, content, highlight, po
             maxHeight: showDetails ? 'none' : '100px',
             overflow: showDetails ? 'visible' : 'hidden',
             textOverflow: 'ellipsis',
-            
           }}
         >
           {content}
@@ -90,7 +107,7 @@ const BlogPostTemplate = ({ title, date, readTime, image, content, highlight, po
               fontSize: 'larger',
               textAlign: 'left',
               whiteSpace: 'pre-wrap',
-               color: '#655'
+              color: '#655',
             }}
           >
             <ReactMarkdown
@@ -130,9 +147,9 @@ const BlogList = () => {
           color: '#F5A623',
         }}
       >
-        Whisky Advent Calendars
+        Whiskytopia Blogs
       </Typography>
-      <Box sx={{ display: 'flex', flexDirection: 'column', gap: 4, }}>
+      <Box sx={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
         {blogs.map((post, index) => (
           <BlogPostTemplate
             key={index}
