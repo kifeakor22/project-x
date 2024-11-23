@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { Box, Typography, Card, CardMedia, CardContent, Button, Container } from '@mui/material';
-import { styled } from '@mui/system';
+import { positions, styled } from '@mui/system';
 import blogs from '../../blog.json';
 import aImage from './assets/a.jpg'; // Import the images directly
 import bImage from './assets/b.jpg';
@@ -38,6 +38,7 @@ const BlogPostTemplate = ({ title, date, readTime, image, content, highlight, po
     img: ({ src, alt }) => {
       console.log(`Resolving image: ${src}`); // Debugging path resolution
       const resolvedImage = imageMap[src] || src; // Resolve the image path or fallback to raw source
+      console.log(`Resolved to: ${resolvedImage}`); // Verify the resolved path
 
       return (
         <img
