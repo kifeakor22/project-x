@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { Box, Typography, Card, CardMedia, CardContent, Button, Container } from '@mui/material';
-import { positions, styled } from '@mui/system';
+import { styled } from '@mui/system';
 import blogs from '../../blog.json';
 import aImage from './assets/a.jpg'; // Import the images directly
 import bImage from './assets/b.jpg';
