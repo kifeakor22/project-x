@@ -49,7 +49,7 @@ const NoviceSection = () => {
             variant="h2"
             sx={{
               fontWeight: 'bold',
-              color: '#8C4B2A', // Warm brown for title
+              color: '#F5A623', // Warm brown for title
               marginBottom: '20px',
               lineHeight: 1.2,
             }}
@@ -86,7 +86,7 @@ const NoviceSection = () => {
           <Button
             variant="contained"
             sx={{
-              backgroundColor: '#8C4B2A', // Match the title color
+              backgroundColor: '#F5A456', // Match the title color
               color: '#FFF',
               fontWeight: 'bold',
               padding: '10px 20px',
@@ -104,7 +104,7 @@ const NoviceSection = () => {
       {/* Whiskytopia Reviews Section */}
       <Box
         sx={{
-          backgroundColor: '#8C4B2A', // Dark brown background
+          backgroundColor: '#F5A456', // Dark brown background
           color: '#FFF',
           borderRadius: '10px',
           padding: '40px',
@@ -156,14 +156,14 @@ const NoviceSection = () => {
           following whisky retailers:{' '}
           <Link
             href="https://www.whiskyshop.com" // Replace with the correct URL
-            sx={{ color: '#FFD700', fontWeight: 'bold' }}
+            sx={{ color: '#FFS789', fontWeight: 'bold' }}
           >
             The Whisky Shop
           </Link>{' '}
           and{' '}
           <Link
             href="https://www.masterofmalt.com" // Replace with the correct URL
-            sx={{ color: '#FFD700', fontWeight: 'bold' }}
+            sx={{ color: '#FFS789', fontWeight: 'bold' }}
           >
             Master of Malt
           </Link>
@@ -180,7 +180,7 @@ const NoviceSection = () => {
           <Button
             variant="contained"
             sx={{
-              backgroundColor: '#FFD700', // Golden button
+              backgroundColor: '#F5A623', // Golden button
               color: '#8C4B2A',
               fontWeight: 'bold',
               '&:hover': {
@@ -194,8 +194,8 @@ const NoviceSection = () => {
           <Button
             variant="outlined"
             sx={{
-              borderColor: '#FFD700',
-              color: '#FFD700',
+              borderColor: 'black',
+              color: 'black',
               fontWeight: 'bold',
               '&:hover': {
                 borderColor: '#FFC107',
