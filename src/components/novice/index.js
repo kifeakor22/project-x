@@ -1,9 +1,15 @@
 import React from 'react';
 import { Box, Typography, Button, Link } from '@mui/material';
 import noviecImage from './assets/novice.png';
+import { useNavigate } from 'react-router-dom';
+
+
+
 
 const NoviceSection = () => {
+    const navigate = useNavigate();
   return (
+
     <Box
       sx={{
         backgroundColor: '#F9F7F4', // Light beige
@@ -83,7 +89,8 @@ const NoviceSection = () => {
             to distilleries, regions, and processes, we make it fun without
             overwhelming you with information overload.
           </Typography>
-          <Button
+          
+          <Button onClick={() => navigate('/product')}
             variant="contained"
             sx={{
               backgroundColor: '#F5A456', // Match the title color

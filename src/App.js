@@ -9,6 +9,7 @@ import Footer from './components/footer';
 import BlogList from './components/blog';
 import NoviceSection from './components/novice';
 
+
 import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './components/pages/home';
