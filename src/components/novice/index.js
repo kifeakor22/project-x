@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Typography, Button, Link } from '@mui/material';
-import noviecImage from './assets/try.gif';
+import noviecImage from './assets/novice.png';
 import { useNavigate } from 'react-router-dom';
 
 
@@ -36,10 +36,10 @@ const NoviceSection = () => {
           alt="Whisky glass"
           sx={{
             maxWidth: { xs: '80%', sm: '50%' }, // Larger image on small screens
-            height: '600px',
+            height: 'auto',
             borderRadius: '10px',
             boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-            width: '400px',
+            width: '100%',
             mt: { xs: 2, sm: 0 }, // Margin top for small screens to add spacing
           }}
         />
