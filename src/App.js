@@ -7,6 +7,7 @@ import AboutUs from './components/about';
 import Nav from './components/nav';
 import Footer from './components/footer';
 import BlogList from './components/blog';
+import NoviceSection from './components/novice';
 
 import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
@@ -26,6 +27,7 @@ function App() {
            <Route path="/product" element={<Product/>}></Route>
            <Route path="/about-us" element={<AboutUs />} />
            <Route path='/blog' element={<BlogList />} />
+           <Route path='/novice' element={<NoviceSection/>} />
       </Routes>
       <Footer/>
       </div>

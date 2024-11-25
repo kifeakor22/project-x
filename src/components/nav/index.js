@@ -90,7 +90,7 @@ const Nav = () => {
               >
                 Blog
               </Button>
-              <Button
+              <Button onClick={() => navigate('/novice')}
                 className="navLink"
                 variant="button"
                 href=""
