@@ -162,19 +162,33 @@ const NoviceSection = () => {
           If you want to explore further whisky products, we recommend the
           following whisky retailers:{' '}
           <Link
-            href="https://www.whiskyshop.com" // Replace with the correct URL
+            href="https://www.masterofmalt.com/?utm_source=www.whiskytopia.co.uk&utm_medium=affiliate&adnetwork=af&affc=00ef216a-5642-4572-9744-2d911d00be41" // Replace with the correct URL
             sx={{ color: '#FFS789', fontWeight: 'bold' }}
           >
             The Whisky Shop
           </Link>{' '}
           and{' '}
           <Link
-            href="https://www.masterofmalt.com" // Replace with the correct URL
+            href="https://www.whiskyshop.com/?utm_source=AffiliateFuture&utm_medium=affiliate&utm_campaign=www.whiskytopia.co.uk&affc=1f677403-12ae-4153-90c5-db4a3d8583ed" // Replace with the correct URL
             sx={{ color: '#FFS789', fontWeight: 'bold' }}
           >
             Master of Malt
           </Link>
           . Please use the below links to have a nosey about.
+        </Typography>
+        <Typography
+          variant="body2"
+          sx={{
+            color: 'black',
+            fontWeight: 'bold',
+            fontStyle: 'italic',
+            fontSize: '16px',
+            lineHeight: 1.8,
+            marginBottom: '20px',
+          }}
+        >
+            All the links below are affiliate, which means we receive a small commission if you purchase the item. 
+            This helps with the upkeep of the blog. We will never ask for your financial details. Please enjoy the reviews.
         </Typography>
         <Box
           sx={{
