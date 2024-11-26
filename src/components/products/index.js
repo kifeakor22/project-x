@@ -278,6 +278,38 @@ const Product = () => {
             },
           }}
         />
+        <TextField
+          fullWidth
+          variant="outlined"
+          label="Country"
+          value={modalContent.country || ''}
+          sx={{
+            marginBottom: '10px',
+            '& .MuiInputLabel-root': { color: '#FFF' },
+            '& .MuiOutlinedInput-root': {
+              '& fieldset': { border: 'none' },
+              '&:hover fieldset': { border: 'none' },
+              '&.Mui-focused fieldset': { border: 'none' },
+              color: '#FFF',
+            },
+          }}
+        />
+        <TextField
+          fullWidth
+          variant="outlined"
+          label="region"
+          value={modalContent.region || ''}
+          sx={{
+            marginBottom: '10px',
+            '& .MuiInputLabel-root': { color: '#FFF' },
+            '& .MuiOutlinedInput-root': {
+              '& fieldset': { border: 'none' },
+              '&:hover fieldset': { border: 'none' },
+              '&.Mui-focused fieldset': { border: 'none' },
+              color: '#FFF',
+            },
+          }}
+        />
       </form>
 
       {/* Responsive Button */}
