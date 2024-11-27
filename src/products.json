@@ -73,7 +73,7 @@
 "finish": "Fresh ginger, dried honeyed fruits, woody spice, black tead, fisherman friend cough sweets, dense smoke, drying, liquorice. ",
 "country": "Scotland",
 "region": "󠁧slay",
-"tags": ["novice"]
+"tags": [""]
 },
     {
          "id": 5,
@@ -86,7 +86,8 @@
     "link"  : "https://scripts.affiliatefuture.com/AFShortUrl.aspx?id=43051",
     "taste": "Fruity with hints of oak 🍎🍪",
     "smell": "Peaty with a hint of vanilla 👃🍦",
-    "region": "󠁧🏴󠁧󠁢󠁳󠁣󠁴󠁿"      
+    "region": "󠁧🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+    "tags": ["novice"]     
     },
      {
         "id": 6,
@@ -96,7 +97,8 @@
       "alt":"Whisky",
     "price": "Price £30.67",
      "review": "Absolute steal from Ardna! A real flight to quality from these independent rock star producers who are relatively new on the scene and already amassing a cult following. Featuring 4 x 50cl (yes big ones) of original expression, a rum, a sherry and even a sauternes (think apricot, peach & honey) cask finish!",
-     "link": "https://scripts.affiliatefuture.com/AFShortUrl.aspx?id=43063"    
+     "link": "https://scripts.affiliatefuture.com/AFShortUrl.aspx?id=43063",
+     "tags": ["novice"]         
     },
      {
         "id": 7,
