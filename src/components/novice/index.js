@@ -1,32 +1,35 @@
 import React from 'react';
-import { Box, Typography, Button, Link } from '@mui/material';
+import { Box, Typography, Button, Card, CardContent, CardMedia, Link } from '@mui/material';
 import noviecImage from './assets/novice.png';
 import { useNavigate } from 'react-router-dom';
-
-
-
+import products from '../../products.json'; // Import the product JSON file
 
 const NoviceSection = () => {
-    const navigate = useNavigate();
-  return (
+  const navigate = useNavigate();
 
+  // Filter products tagged with "novice"
+  const noviceProducts = products.filter((product) => product.tags && product.tags.includes('novice'));
+
+  return (
     <Box
       sx={{
-        backgroundColor: '#F9F7F4', // Light beige
-        padding: { xs: '40px 20px', md: '80px 40px' },
+        backgroundColor: '#F9F7F4',
+        padding: { xs: '20px', sm: '40px', md: '80px' },
         textAlign: 'center',
         display: 'flex',
         flexDirection: 'column',
-        gap: '60px', // Add spacing between sections
+        gap: '60px',
       }}
     >
-      {/* First Section */}
+      {/* Introduction Section */}
       <Box
         sx={{
           display: 'flex',
           flexDirection: { xs: 'column', md: 'row' },
           alignItems: 'center',
           gap: '40px',
+          maxWidth: '1200px',
+          margin: '0 auto',
         }}
       >
         {/* Image Section */}
@@ -35,71 +38,56 @@ const NoviceSection = () => {
           src={noviecImage}
           alt="Whisky glass"
           sx={{
-            maxWidth: { xs: '80%', sm: '50%' }, // Larger image on small screens
+            width: { xs: '100%', sm: '50%' },
             height: 'auto',
-            borderRadius: '10px',
-            boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-            width: '100%',
-            mt: { xs: 2, sm: 0 }, // Margin top for small screens to add spacing
+            borderRadius: '15px',
+            boxShadow: '0 8px 16px rgba(0, 0, 0, 0.1)',
           }}
         />
 
         {/* Content Section */}
         <Box
           sx={{
-            textAlign: 'left',
+            textAlign: { xs: 'center', md: 'left' },
             maxWidth: '600px',
+            padding: { xs: '20px 0', md: '0' },
           }}
         >
           <Typography
-            variant="h2"
+            variant="h3"
             sx={{
               fontWeight: 'bold',
-              color: '#F5A623', // Warm brown for title
+              color: '#F5A623',
+              lineHeight: 1.3,
               marginBottom: '20px',
-              lineHeight: 1.2,
             }}
           >
-            The Beginning of <br />
-            Your Whisky Adventure...
+            The Beginning of Your Whisky Adventure...
           </Typography>
           <Typography
             variant="body1"
             sx={{
               fontSize: '18px',
-              color: '#5A5A5A', // Neutral gray for text
+              color: '#5A5A5A',
               marginBottom: '20px',
+              lineHeight: 1.8,
             }}
           >
             Welcome, fellow whisky lovers, to the Whisky Novice's Playground!
-            Wipe your feet at the mat before coming in... lol. Get ready for a
-            journey that’s as delightful as it is enlightening. If you’re new to
-            the world of whisky, fear not—this is where the fun begins!
+            Dive into a journey that’s as delightful as it is enlightening. This
+            is your gateway to the world of whisky!
           </Typography>
-          <Typography
-            variant="body2"
-            sx={{
-              fontSize: '16px',
-              color: '#5A5A5A',
-              marginBottom: '30px',
-            }}
-          >
-            Our carefully crafted reviews are designed to help you understand
-            and learn what whisky is all about. From flavors and pronunciations
-            to distilleries, regions, and processes, we make it fun without
-            overwhelming you with information overload.
-          </Typography>
-          
-          <Button onClick={() => navigate('/product')}
+          <Button
+            onClick={() => navigate('/product')}
             variant="contained"
             sx={{
-              backgroundColor: '#F5A456', // Match the title color
+              backgroundColor: '#F5A623',
               color: '#FFF',
-              fontWeight: 'bold',
               padding: '10px 20px',
               borderRadius: '25px',
+              fontWeight: 'bold',
               '&:hover': {
-                backgroundColor: '#703B22',
+                backgroundColor: '#FFB74D',
               },
             }}
           >
@@ -162,14 +150,14 @@ const NoviceSection = () => {
           If you want to explore further whisky products, we recommend the
           following whisky retailers:{' '}
           <Link
-            href="https://www.masterofmalt.com/?utm_source=www.whiskytopia.co.uk&utm_medium=affiliate&adnetwork=af&affc=00ef216a-5642-4572-9744-2d911d00be41" // Replace with the correct URL
+            href="https://www.masterofmalt.com/?utm_source=www.whiskytopia.co.uk&utm_medium=affiliate&adnetwork=af&affc=00ef216a-5642-4572-9744-2d911d00be41"
             sx={{ color: '#FFS789', fontWeight: 'bold' }}
           >
             The Whisky Shop
           </Link>{' '}
           and{' '}
           <Link
-            href="https://www.whiskyshop.com/?utm_source=AffiliateFuture&utm_medium=affiliate&utm_campaign=www.whiskytopia.co.uk&affc=1f677403-12ae-4153-90c5-db4a3d8583ed" // Replace with the correct URL
+            href="https://www.whiskyshop.com/?utm_source=AffiliateFuture&utm_medium=affiliate&utm_campaign=www.whiskytopia.co.uk&affc=1f677403-12ae-4153-90c5-db4a3d8583ed"
             sx={{ color: '#FFS789', fontWeight: 'bold' }}
           >
             Master of Malt
@@ -187,8 +175,7 @@ const NoviceSection = () => {
             marginBottom: '20px',
           }}
         >
-            All the links below are affiliate, which means we receive a small commission if you purchase the item. 
-            This helps with the upkeep of the blog. We will never ask for your financial details. Please enjoy the reviews.
+          All the links below are affiliate, which means we receive a small commission if you purchase the item. This helps with the upkeep of the blog. We will never ask for your financial details. Please enjoy the reviews.
         </Typography>
         <Box
           sx={{
@@ -223,10 +210,120 @@ const NoviceSection = () => {
                 color: '#FFC107',
               },
             }}
-            href='https://www.masterofmalt.com/?utm_source=www.whiskytopia.co.uk&utm_medium=affiliate&adnetwork=af&affc=00ef216a-5642-4572-9744-2d911d00be41'
+            href="https://www.masterofmalt.com/?utm_source=www.whiskytopia.co.uk&utm_medium=affiliate&adnetwork=af&affc=00ef216a-5642-4572-9744-2d911d00be41"
           >
             Master of Malt
           </Button>
+        </Box>
+      </Box>
+
+      {/* Product Section */}
+      <Box
+        sx={{
+          backgroundColor: '#FFFFFF',
+          padding: '40px',
+          borderRadius: '15px',
+          boxShadow: '0 8px 16px rgba(0, 0, 0, 0.1)',
+        }}
+      >
+        <Typography
+          variant="h4"
+          sx={{
+            fontWeight: 'bold',
+            marginBottom: '30px',
+            color: '#F5A623',
+            textAlign: 'center',
+          }}
+        >
+          Explore Our Novice Picks
+        </Typography>
+        <Box
+          sx={{
+            display: 'grid',
+            gridTemplateColumns: { xs: '1fr', sm: '1fr 1fr', md: '1fr 1fr 1fr' },
+            gap: '20px',
+          }}
+        >
+          {noviceProducts.map((product) => (
+            <Card
+              key={product.id}
+              sx={{
+                maxWidth: 345,
+                margin: '0 auto',
+                borderRadius: '10px',
+                transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+                '&:hover': {
+                  transform: 'scale(1.05)',
+                  boxShadow: '0 12px 24px rgba(0, 0, 0, 0.2)',
+                },
+              }}
+            >
+                <CardMedia
+  component="img"
+  height="180"
+  image={product.image}
+  alt={product.name}
+  sx={{
+    height: '150px',
+    objectFit: 'contain',
+    marginBottom: '10px',
+    marginTop: '10px',
+ 
+    transform: 'scale(1.1)', // Zooms out the image to show more content
+    transition: 'transform 0.3s ease', // Smooth transition when scaling
+  }}
+/>
+
+              <CardContent
+                sx={{
+                  textAlign: 'left',
+                }}
+              >
+                <Typography
+                  gutterBottom
+                  variant="h5"
+                  component="div"
+                  sx={{ fontWeight: 'bold', color: '#333' }}
+                >
+                  {product.name}
+                </Typography>
+                <Typography
+                  variant="body2"
+                  color="text.secondary"
+                  sx={{ lineHeight: 1.6, marginBottom: '10px' }}
+                >
+                  {product.description}
+                </Typography>
+                <Typography
+                  variant="body1"
+                  sx={{
+                    fontWeight: 'bold',
+                    color: '#F5A623',
+                    marginBottom: '10px',
+                  }}
+                >
+                  Price: {product.price}
+                </Typography>
+                <Button
+                  href={product.link}
+                  target="_blank"
+                  variant="contained"
+                  sx={{
+                    backgroundColor: '#F5A623',
+                    color: '#FFF',
+                    fontWeight: 'bold',
+                    padding: '10px 15px',
+                    borderRadius: '20px',
+                    '&:hover': {
+                      backgroundColor: '#FFB74D',
+                    },
+                  }}
+                >
+                  View Product
+                </Button>
+              </CardContent>
+            </Card>
+          ))}
         </Box>
       </Box>
     </Box>

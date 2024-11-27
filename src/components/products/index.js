@@ -184,7 +184,8 @@ const Product = () => {
         sx={{
           textAlign: 'center',
           marginBottom: '15px',
-          color: '#FFF',
+          color: 'black',
+          fontWeight: 'bolder',
           fontSize: { xs: '1.2rem', sm: '1.5rem' }, // Responsive font size
         }}
       >
@@ -221,7 +222,7 @@ const Product = () => {
         variant="body2"
         sx={{
           marginBottom: '15px',
-          color: '#FFF',
+          color: 'black',
           fontSize: { xs: '0.85rem', sm: '1rem' },
         }}
       >

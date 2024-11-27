@@ -41,7 +41,8 @@ function HomeContent() {
           justifyContent: 'center', // Horizontally center content
           alignItems: 'center', // Vertically center content
           margin: '5px',
-          color: 'rgb(153, 153, 153)',
+          color: 'white',
+          fontWeight: 'bolder'
           
 
         }}
@@ -74,11 +75,11 @@ function HomeContent() {
           <Box sx={{ maxWidth: '100%' }}>
             <Typography variant="h4"
               sx={{
-                color: 'rgb(153, 153, 153)',
+                color: 'white',
                 fontSize: { xs: '1.5rem', sm: '2.5rem', md: '3rem', } 
                 // Adjust font size for small, medium, and large screens
               }}>
-              <p>Lets start the journey</p>
+              <p>let’s start our whisky journey together…</p>
             </Typography>
 
             <Typography data-aos="fade-up" variant="body1" mt={2} gutterBottom>
