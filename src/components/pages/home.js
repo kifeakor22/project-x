@@ -91,7 +91,7 @@ function HomeContent() {
               </p>
               <p>
                 So, whether you are a newbie, semi-knowledgeable or an expert, we hope you can
-                find something new. So, pull up a seat and get those taste buds ready.....
+                find something new. So, pull up a seat and get those taste buds ready!.....
               </p>
             </Typography>
           </Box>
