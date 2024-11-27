@@ -63,7 +63,7 @@ const AboutUs = () => {
       {/* Team Section */}
       <section className="team-section">
         <h2>Meet the Team</h2>
-        <p>Welcome to Whiskytopia, a passionate, honest, and humorous Scotch Whisky review site. Meet Garry (G) and Tony (T): two enthusiastic geeks who get giddy about whisky and want to keep sharing and learning about the water of life.</p>
+        <p>Welcome to Whiskytopia, a passionate, honest, and humorous Scotch Whisky review site. Meet Garry (G), Tony (T) and KC (K): three enthusiastic geeks who get giddy about whisky and want to keep sharing and learning about the water of life.</p>
         <p>Look out for Hamish, our Highland Coo and social media guru. He might introduce himself on our platforms, as he is rather knowledgeable.</p>
       </section>
 
