@@ -196,7 +196,7 @@ const Deal = () => {
               },
             }}
           >
-            {modalContent.price}
+            Buy Now {modalContent.price}
           </Button>
           <Button
             onClick={handleModalClose}
