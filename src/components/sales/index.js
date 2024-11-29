@@ -52,14 +52,14 @@ const BlackFridayPopup = () => {
             }}
           />
         <Button
-                sx={{ color: '#F5A623' }}
+                sx={{ color: '#F5A623', margin: '5px', fontWeight: 'bolder' }}
                 variant="contained"
                 className="projectBtn"
-                size="small"
+                size="auto"
                 href={featuredProduct.link}
                 target="_blank"
                 rel="noopener noreferrer"
-              >Buy Now</Button>
+              >Buy Now {featuredProduct.price}</Button>
         </Box>
       </DialogContent>
       <DialogActions sx={{ backgroundColor: '#F5A623' }}>

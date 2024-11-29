@@ -147,7 +147,7 @@ const BlogList = () => {
           color: '#F5A623',
         }}
       >
-        Whiskytopia Blogs
+        Whiskytopia's Blogs
       </Typography>
       <Box sx={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
         {blogs.map((post, index) => (

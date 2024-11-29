@@ -192,10 +192,11 @@ const Deal = () => {
               textTransform: 'uppercase',
               '&:hover': {
                 backgroundColor: '#444',
+                margin: '5'
               },
             }}
           >
-            Buy Now
+            {modalContent.price}
           </Button>
           <Button
             onClick={handleModalClose}
