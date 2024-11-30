@@ -41,9 +41,11 @@ function HomeContent() {
           justifyContent: 'center', // Horizontally center content
           alignItems: 'center', // Vertically center content
           margin: '5px',
-          color: 'white',
-          fontWeight: 'bolder'
-          
+          color: 'linear-gradient(90deg, #F44336, #FF9800)',
+          fontWeight: 'bolder',
+          background: 'linear-gradient(90deg, #F44336, #FF9800)', // Gradient background
+          WebkitBackgroundClip: 'text', // Clips the background to text
+          WebkitTextFillColor: 'transparent', // Makes text fill transparent to reveal the gradient
 
         }}
       >
