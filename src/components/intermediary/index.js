@@ -120,7 +120,7 @@ const WhiskyLevelUp = () => {
                     marginBottom: "10px",
                   }}
                 >
-                  Price: {product.price}
+                {product.price}
                 </Typography>
                 <Button
                   href={product.link}
