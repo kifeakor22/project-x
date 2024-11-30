@@ -236,7 +236,7 @@ const Product = () => {
           marginBottom: "20px",
         }}
       >
-        <strong>Review:</strong> {modalContent.review || "No reviews available."}
+        <strong>WT Review:</strong> {modalContent.review || "No reviews available."}
       </Typography>
 
       {/* Data Fields */}
