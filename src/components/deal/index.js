@@ -76,7 +76,7 @@ const Deal = () => {
               <img
                 src={process.env.PUBLIC_URL + product.image}
                 alt={product.alt}
-                style={{ width: '100%', height: 'auto' }}
+                style={{ width: '100%', height: 'auto', margin: '5px' }}
               />
               <Typography
                 variant="h6"

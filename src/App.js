@@ -8,6 +8,7 @@ import Nav from './components/nav';
 import Footer from './components/footer';
 import BlogList from './components/blog';
 import NoviceSection from './components/novice';
+import WhiskyLevelUp from './components/intermediary';
 
 
 import './App.css';
@@ -29,6 +30,7 @@ function App() {
            <Route path="/about-us" element={<AboutUs />} />
            <Route path='/blog' element={<BlogList />} />
            <Route path='/novice' element={<NoviceSection/>} />
+           <Route path='intermediary' element={<WhiskyLevelUp/>} />
       </Routes>
       <Footer/>
       </div>

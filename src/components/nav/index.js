@@ -98,7 +98,7 @@ const Nav = () => {
               >
                 Novice
               </Button>
-              <Button
+              <Button  onClick={() => navigate('/intermediary')}
                 className="navLink"
                 variant="button"
                 href=""
