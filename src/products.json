@@ -119,7 +119,7 @@
     "taste": "Fruity with hints of oak 🍎🍪",
     "smell": "Peaty with a hint of vanilla 👃🍦",
     "region": "󠁧🏴󠁧󠁢󠁳󠁣󠁴󠁿",
-    "tags": ["novice"]     
+    "tags": ["inter"]     
     },
      {
         "id": 8,
@@ -130,7 +130,7 @@
     "price": "Price £30.67",
      "review": "Absolute steal from Ardna! A real flight to quality from these independent rock star producers who are relatively new on the scene and already amassing a cult following. Featuring 4 x 50cl (yes big ones) of original expression, a rum, a sherry and even a sauternes (think apricot, peach & honey) cask finish!",
      "link": "https://scripts.affiliatefuture.com/AFShortUrl.aspx?id=43063",
-     "tags": ["novice"]         
+     "tags": ["inter"]         
     },
      {
         "id": 9,
@@ -140,7 +140,10 @@
          "alt":"Whisky",
          "price": "Price £33.35",
          "review": "Having visited their Elgin distillery in the populated Speyside region and sampled some of their core range including a distillery exclusive plus this Port Cask finish - the guys and girls at Glen Moray should definitely not be overlooked or written off. This is simply a great tasting dram and a blinding price point. Red currants and blackberries combined with vanilla, cinnamon and cocoa! You're all set up for a fireside chat! ",
-          "link" :   "https://scripts.affiliatefuture.com/AFShortUrl.aspx?id=43062"       
+          "link" :   "https://scripts.affiliatefuture.com/AFShortUrl.aspx?id=43062" , 
+          "region" : "Speyside",
+          "country":"Scotland",
+          "tags": ["novice"]       
     },
      {
        "id": 10,

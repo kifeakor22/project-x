@@ -106,11 +106,11 @@ const WhiskyLevelUp = () => {
                   {product.name}
                 </Typography>
                 <Typography
-                  variant="body2"
-                  color="text.secondary"
-                  sx={{ lineHeight: 1.6, marginBottom: "10px" }}
+                  variant="body1"
+                  color="text.primary"
+                  sx={{ lineHeight: 1.6, marginBottom: "10px", fontWeight: "bolder" }}
                 >
-                  {product.description}
+                  {product.review}
                 </Typography>
                 <Typography
                   variant="body1"
