@@ -144,12 +144,6 @@ const WhiskyLevelUp = () => {
           ))}
         </Box>
       </Box>
-
-      <footer className="whisky-footer">
-        <Typography variant="body2" sx={{ textAlign: "center", marginTop: "40px", color: "#888" }}>
-          © 2024 Whiskytopia. All rights reserved.
-        </Typography>
-      </footer>
     </div>
   );
 };
