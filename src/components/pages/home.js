@@ -79,7 +79,7 @@ function HomeContent() {
                 fontSize: { xs: '1.5rem', sm: '2.5rem', md: '3rem', } 
                 // Adjust font size for small, medium, and large screens
               }}>
-              <p>let’s start our whisky journey together…</p>
+              <p>Let’s start our whisky journey together…</p>
             </Typography>
 
             <Typography data-aos="fade-up" variant="body1" mt={2} gutterBottom>

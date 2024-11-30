@@ -134,205 +134,193 @@ const Product = () => {
         ))}
       </Slider>
 
-      {modalOpen && (
+  {modalOpen && (
   <div
     style={{
-      position: 'fixed',
+      position: "fixed",
       top: 0,
       left: 0,
-      width: '100vw',
-      height: '100vh',
-      backgroundColor: 'rgba(0, 0, 0, 0.5)', // Semi-transparent overlay
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
+      width: "100vw",
+      height: "100vh",
+      backgroundColor: "rgba(0, 0, 0, 0.8)", // Dark overlay
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
       zIndex: 1000,
     }}
   >
     <div
       style={{
-        backgroundColor: '#F5A623', // Golden background
-        borderRadius: '12px',
-        maxWidth: '500px',
-        width: '90%',
-        padding: '20px',
-        boxShadow: '0 4px 20px rgba(0, 0, 0, 0.2)',
-        position: 'relative',
-        overflowY: 'auto', // Enable scrolling for smaller devices
-        maxHeight: '90vh', // Ensure content doesn't overflow the screen
+        backgroundColor: "#1E1E1E", // Sleek dark modal background
+        borderRadius: "16px",
+        maxWidth: "500px",
+        width: "90%",
+        padding: "24px",
+        boxShadow: "0 8px 30px rgba(0, 0, 0, 0.6)", // Modern shadow
+        position: "relative",
+        overflowY: "auto",
+        maxHeight: "90vh",
+        color: "#FFF",
       }}
     >
       {/* Close Button */}
-      <span
+      <button
         onClick={handleModalClose}
         style={{
-          position: 'absolute',
-          top: '10px',
-          right: '15px',
-          fontSize: '24px',
-          cursor: 'pointer',
-          color: '#FFF',
-          fontWeight: 'bold',
+          position: "absolute",
+          top: "12px",
+          right: "12px",
+          background: "none",
+          border: "none",
+          fontSize: "24px",
+          cursor: "pointer",
+          color: "#FFF",
         }}
+        aria-label="Close"
       >
         &times;
-      </span>
+      </button>
 
       {/* Modal Content */}
       <Typography
         variant="h5"
         sx={{
-          textAlign: 'center',
-          marginBottom: '15px',
-          color: 'black',
-          fontWeight: 'bolder',
-          fontSize: { xs: '1.2rem', sm: '1.5rem' }, // Responsive font size
+          textAlign: "center",
+          fontWeight: "bold",
+          marginBottom: "16px",
+          color: "#F5A623", // Golden title
+          fontSize: { xs: "1.6rem", sm: "2rem" },
         }}
       >
-        {modalContent.title}
+        {modalContent.title || "Default Title"}
       </Typography>
+
       <Typography
         variant="body1"
         sx={{
-          marginBottom: '15px',
-          color: '#FFF',
-          textAlign: 'center',
-          fontSize: { xs: '0.9rem', sm: '1rem' },
+          textAlign: "center",
+          color: "#D1D1D1",
+          fontSize: { xs: "1rem", sm: "1.2rem" },
+          marginBottom: "20px",
         }}
       >
-        {modalContent.description}
+        {modalContent.description || "Description not available."}
       </Typography>
 
       {/* Responsive Image */}
-      <img
-        src={require(`${modalContent.image}`)}
-        alt={modalContent.title}
-        style={{
-          width: '100%',
-          maxWidth: '300px', // Limit image size
-          height: 'auto',
-          borderRadius: '8px',
-          display: 'block',
-          margin: '0 auto 20px',
-          boxShadow: '0 4px 10px rgba(0, 0, 0, 0.1)',
+      {modalContent.image && (
+        <img
+          src={require(`${modalContent.image}`)}
+          alt={modalContent.title || "Modal Image"}
+          style={{
+            width: "100%",
+            maxWidth: "400px",
+            height: "auto",
+            borderRadius: "12px",
+            marginBottom: "20px",
+            display: "block",
+            marginLeft: "auto",
+            marginRight: "auto",
+            boxShadow: "0 4px 12px rgba(0, 0, 0, 0.3)",
+          }}
+        />
+      )}
+
+      {/* Review Section */}
+      <Typography
+        variant="body2"
+        sx={{
+          color: "#FFD700", // Golden for emphasis
+          textAlign: "center",
+          fontSize: { xs: "1rem", sm: "1.2rem" },
+          marginBottom: "20px",
         }}
-      />
+      >
+        <strong>Review:</strong> {modalContent.review || "No reviews available."}
+      </Typography>
+
+      {/* Data Fields */}
+      <Typography
+        variant="body2"
+        sx={{
+          color: "#FFF",
+          fontSize: { xs: "1rem", sm: "1.2rem" },
+          marginBottom: "12px",
+        }}
+      >
+        <strong style={{ color: "#F5A623" }}>Nose 👃:</strong> {modalContent.smell || "No data"}
+      </Typography>
 
       <Typography
         variant="body2"
         sx={{
-          marginBottom: '15px',
-          color: 'black',
-          fontSize: { xs: '0.85rem', sm: '1rem' },
+          color: "#FFF",
+          fontSize: { xs: "1rem", sm: "1.2rem" },
+          marginBottom: "12px",
         }}
       >
-        {modalContent.review}
+        <strong style={{ color: "#F5A623" }}>Palate 👅:</strong> {modalContent.taste || "No data"}
       </Typography>
 
-      {/* Responsive Form */}
-      <form>
-        <TextField
-          fullWidth
-          variant="outlined"
-          label="Nose 👃"
-          value={modalContent.smell || ''}
-          sx={{
-            marginBottom: '10px',
-            '& .MuiInputLabel-root': { color: '#FFF' },
-            '& .MuiOutlinedInput-root': {
-              '& fieldset': { border: 'none' },
-              '&:hover fieldset': { border: 'none' },
-              '&.Mui-focused fieldset': { border: 'none' },
-              color: '#FFF',
-            },
-          }}
-        />
-        <TextField
-          fullWidth
-          variant="outlined"
-          label="Palate 👅"
-          value={modalContent.taste || ''}
-          sx={{
-            marginBottom: '10px',
-            '& .MuiInputLabel-root': { color: '#FFF' },
-            '& .MuiOutlinedInput-root': {
-              '& fieldset': { border: 'none' },
-              '&:hover fieldset': { border: 'none' },
-              '&.Mui-focused fieldset': { border: 'none' },
-              color: '#FFF',
-            },
-          }}
-        />
-        <TextField
-          fullWidth
-          variant="outlined"
-          label="Finish 🏁"
-          value={modalContent.finish || ''}
-          sx={{
-            marginBottom: '10px',
-            '& .MuiInputLabel-root': { color: '#FFF' },
-            '& .MuiOutlinedInput-root': {
-              '& fieldset': { border: 'none' },
-              '&:hover fieldset': { border: 'none' },
-              '&.Mui-focused fieldset': { border: 'none' },
-              color: '#FFF',
-            },
-          }}
-        />
-        <TextField
-          fullWidth
-          variant="outlined"
-          label="Country"
-          value={modalContent.country || ''}
-          sx={{
-            marginBottom: '10px',
-            '& .MuiInputLabel-root': { color: '#FFF' },
-            '& .MuiOutlinedInput-root': {
-              '& fieldset': { border: 'none' },
-              '&:hover fieldset': { border: 'none' },
-              '&.Mui-focused fieldset': { border: 'none' },
-              color: '#FFF',
-            },
-          }}
-        />
-        <TextField
-          fullWidth
-          variant="outlined"
-          label="region"
-          value={modalContent.region || ''}
-          sx={{
-            marginBottom: '10px',
-            '& .MuiInputLabel-root': { color: '#FFF' },
-            '& .MuiOutlinedInput-root': {
-              '& fieldset': { border: 'none' },
-              '&:hover fieldset': { border: 'none' },
-              '&.Mui-focused fieldset': { border: 'none' },
-              color: '#FFF',
-            },
-          }}
-        />
-      </form>
+      <Typography
+        variant="body2"
+        sx={{
+          color: "#FFF",
+          fontSize: { xs: "1rem", sm: "1.2rem" },
+          marginBottom: "12px",
+        }}
+      >
+        <strong style={{ color: "#F5A623" }}>Finish 🏁:</strong> {modalContent.finish || "No data"}
+      </Typography>
 
-      {/* Responsive Button */}
+      <Typography
+        variant="body2"
+        sx={{
+          color: "#FFF",
+          fontSize: { xs: "1rem", sm: "1.2rem" },
+          marginBottom: "12px",
+        }}
+      >
+        <strong style={{ color: "#F5A623" }}>Country:</strong> {modalContent.country || "No data"}
+      </Typography>
+
+      <Typography
+        variant="body2"
+        sx={{
+          color: "#FFF",
+          fontSize: { xs: "1rem", sm: "1.2rem" },
+          marginBottom: "12px",
+        }}
+      >
+        <strong style={{ color: "#F5A623" }}>Region:</strong> {modalContent.region || "No data"}
+      </Typography>
+
+      {/* Call-to-Action Button */}
       <Button
         variant="contained"
-        sx={{
-          width: '100%',
-          backgroundColor: '#333',
-          color: '#FFF',
-          '&:hover': { backgroundColor: '#555' },
-          fontSize: { xs: '0.9rem', sm: '1rem' },
-          padding: { xs: '8px 12px', sm: '10px 20px' },
-        }}
-        href={modalContent.link}
+        href={modalContent.link || "#"}
         target="_blank"
         rel="noopener noreferrer"
+        sx={{
+          width: "100%",
+          backgroundColor: "#F5A623",
+          color: "#1E1E1E",
+          fontSize: { xs: "1rem", sm: "1.2rem" },
+          fontWeight: "bold",
+          padding: { xs: "12px", sm: "16px" },
+          marginTop: "20px",
+          textTransform: "uppercase",
+          "&:hover": {
+            backgroundColor: "#FFD700",
+          },
+        }}
       >
         Buy Now
       </Button>
     </div>
   </div>
 )}
+
 
     </div>
   );
