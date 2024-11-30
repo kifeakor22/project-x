@@ -47,7 +47,7 @@ function HomeContent() {
 
         }}
       >
-        <p>Scotch Whisky Gifts - reviewed with passion</p>
+        <p>Scotch Whisky Gifts - reviewed with passion!</p>
       </Typography>
 
       {/* Hero unit */}
