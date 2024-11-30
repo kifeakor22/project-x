@@ -1,11 +1,18 @@
 import React, { useState, useEffect } from 'react';
-import { Dialog, DialogActions, DialogContent, DialogTitle, Button, Typography, Box } from '@mui/material';
-import { useNavigate } from 'react-router-dom';
-import products from '../../products.json'; // Ensure correct path
+import {
+  Dialog,
+  DialogActions,
+  DialogContent,
+  DialogTitle,
+  Button,
+  Typography,
+  Box,
+  Divider,
+} from '@mui/material';
+import products from '../../products.json'; // Ensure the correct path to your products JSON file
 
 const BlackFridayPopup = () => {
   const [open, setOpen] = useState(false);
-  const navigate = useNavigate();
 
   useEffect(() => {
     setOpen(true); // Open the popup on component mount
@@ -19,51 +26,139 @@ const BlackFridayPopup = () => {
   const featuredProduct = products[0];
 
   return (
-    <Dialog open={open} onClose={handleClose}>
-      <DialogTitle sx={{ backgroundColor: '#F5A623', color: 'white' }}>
+    <Dialog
+      open={open}
+      onClose={handleClose}
+      sx={{
+        '& .MuiDialog-paper': {
+          width: '90%',
+          maxWidth: '500px',
+          borderRadius: '15px',
+          overflow: 'hidden',
+          background: '#1C1C1E', // Sleek dark background
+          boxShadow: '0 8px 24px rgba(0, 0, 0, 0.2)',
+          color: 'white',
+        },
+      }}
+    >
+      {/* Dialog Header */}
+      <DialogTitle
+        sx={{
+          background: 'linear-gradient(90deg, #F44336, #FF9800)',
+          color: 'white',
+          textAlign: 'center',
+          fontWeight: 'bold',
+          fontSize: '20px',
+          padding: '16px 24px',
+        }}
+      >
         🎉 Black Friday Sale! 🎉
       </DialogTitle>
-      <DialogContent sx={{ backgroundColor: '#2C2C2C', color: 'white' }}>
-        <Typography variant="h6"  sx={{ color: '#F5A623' }}>
-          Huge discounts on Scotch Whisky Gift Sets and bottles! 🥃 🎁💰
+
+      {/* Dialog Content */}
+      <DialogContent
+        sx={{
+          padding: '20px',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          gap: '15px',
+        }}
+      >
+        {/* Sale Details */}
+        <Typography
+          variant="h6"
+          sx={{
+            color: '#FF9800',
+            fontWeight: '500',
+            textAlign: 'center',
+            fontSize: '18px',
+          }}
+        >
+          Up to 50% Off on Scotch Whisky Gift Sets! 🥃
         </Typography>
-        <Typography variant="body1" sx={{ marginTop: '10px' }}>
-          Don't miss out on our Black Friday deals! Enjoy up to 50% off selected products for a limited time.
-        </Typography>
-        <Typography variant="body2" sx={{ marginTop: '10px', fontStyle: 'italic' }}>
-          Offer valid until stocks last. Happy shopping!
+        <Typography
+          variant="body2"
+          sx={{
+            color: '#E0E0E0',
+            fontSize: '14px',
+            textAlign: 'center',
+            lineHeight: 1.6,
+          }}
+        >
+          Don’t miss out on this limited-time deal! Grab your favorite products before they sell out.
         </Typography>
 
+        <Divider sx={{ width: '100%', background: '#333', margin: '15px 0' }} />
+
         {/* Featured Product Section */}
-        <Box sx={{ marginTop: '20px' }}>
-          <Typography variant="h6"  sx={{ color: '#F5A623' }}>
-            Featured Product:
+        <Box sx={{ textAlign: 'center', width: '100%' }}>
+          <Typography
+            variant="subtitle1"
+            sx={{
+              color: '#FF9800',
+              fontWeight: 'bold',
+              fontSize: '16px',
+            }}
+          >
+            Featured Product
           </Typography>
           <Box
             component="img"
-            src={process.env.PUBLIC_URL + featuredProduct.image} // Use static path
+            src={process.env.PUBLIC_URL + featuredProduct.image} // Dynamic image path
             alt={featuredProduct.alt}
             sx={{
               width: '100%',
+              maxWidth: '300px',
               height: 'auto',
-              borderRadius: '10px',
-              boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+              borderRadius: '12px',
+              boxShadow: '0 4px 12px rgba(0, 0, 0, 0.3)',
               marginTop: '10px',
             }}
           />
-        <Button
-                sx={{ color: '#F5A623', margin: '5px', fontWeight: 'bolder' }}
-                variant="contained"
-                className="projectBtn"
-                size="auto"
-                href={featuredProduct.link}
-                target="_blank"
-                rel="noopener noreferrer"
-              >Buy Now {featuredProduct.price}</Button>
+          <Button
+            variant="contained"
+            href={featuredProduct.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            sx={{
+              marginTop: '10px',
+              backgroundColor: '#FF9800',
+              color: '#1C1C1E',
+              fontWeight: 'bold',
+              fontSize: '14px',
+              padding: '10px 20px',
+              borderRadius: '8px',
+              '&:hover': {
+                backgroundColor: '#F57C00',
+              },
+            }}
+          >
+            Buy Now for {featuredProduct.price}
+          </Button>
         </Box>
       </DialogContent>
-      <DialogActions sx={{ backgroundColor: '#F5A623' }}>
-        <Button onClick={handleClose} color="primary">
+
+      {/* Dialog Footer */}
+      <DialogActions
+        sx={{
+          justifyContent: 'center',
+          background: '#1C1C1E',
+          padding: '10px 20px',
+        }}
+      >
+        <Button
+          onClick={handleClose}
+          sx={{
+            color: '#FF9800',
+            fontWeight: 'bold',
+            fontSize: '14px',
+            textTransform: 'uppercase',
+            '&:hover': {
+              color: '#F57C00',
+            },
+          }}
+        >
           Close
         </Button>
       </DialogActions>
