@@ -54,7 +54,7 @@ const Deal = () => {
             gap: '30px',
           }}
         >
-          {products.slice(0, 6).map((product) => (
+          {products.slice(0, 8).map((product) => (
             <Box
               key={product.id}
               onClick={() => handleModalOpen(product)}

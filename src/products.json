@@ -1,6 +1,22 @@
 [
   {
     "id": 0,
+    "title": "Talisker Special Releases 2023 Single Malt Scotch Whisky, 70CL",
+    "description": "59.7% Limited Edition Fruity Notes with a Subtle Finish",
+    "image":"./assets/tali.jpg", 
+    "alt":"Whisky",
+    "price": "-55% £49.99; RRP: £110.00RRP",
+    "review": "WT Review:This is a rich and robust Talisker expression - Strong enough to keep you warm on the high seas! Introducing Talisker Special Releases 2023 is a special Scotch Whisky bottled at natural cask strength (59.7%) which carries extra flavour in the high alcohol content. Talisker will always have a special place in our hearts - being the first Single Malt we fell in love with & first distillery tour.This Limited Edition, with simple yet stunning art work - depicts the iconic Caravel sea vessel and pays tribute to the spirit and bravery of original Portuguese sailors and adventurers braving harsh elements and the unforgiving seas to reach the farthest corners of the earth. The Talisker Master blender has tipped his hat to the Portuguese origins of the great seafarer’s ships, by finishing this supreme maritime whisky in a combination of Ruby, White and Tawny port casks - something we have never sampled before! A Ruby or White Port Finish on their own - which are delightful - this one is insane! Perfect for Grandad or Grandma or that wild Aunty or Uncle, or anyone appreciating the sea or boating and an Intermediate / someone already along the seafront on their whisky voyage!",
+    "link"  : "https://amzn.to/49ibVBn",
+    "taste": "House / distillery style still comes through - Sweet sherry, smokey and spicy. Rich, sweetish, smokey and accents of white grapes, dark fruits and dry oak tannin.",
+    "smell": "Balanced, intense with hints of peat stewed over fire, clear notes of fresh sea salt and maritime spray with hints of mussel shells, seaweed,dune sand.",
+    "finish": "Intense & long finish with sea salt, smoke and spices. Richl, robust and rounded. All the flavour profiles & 3 different port characters merge as one creamy-smooth richly fruity taste, with waves of saltiness, smoke and spice.",
+    "country": "Scotland",
+    "region": "Island",
+    "tags":["inter"]
+},
+  {
+    "id": 1,
     "title": "Hakushu Reserve Single Malt Whisky",
     "description": "Suntory Single Malt Whiskey",
     "image":"./assets/jap.jpg", 
@@ -13,9 +29,25 @@
     "finish": " Fresh with faint hint of smoke. ",
     "country": "Japan",
     "region": ""   
+}, 
+{
+  "id": 2,
+  "title": "Port Charlotte 10 Year Old Whisky 70cl",
+  "description": "Scotch Whisky • 70cl • 50%",
+  "image":"./assets/port.webp", 
+  "alt":"Whisky",
+  "price": "Now £45.95 Save £14",
+  "review": "If you love a traditional heavily peated Islay whisky, with a real punch then this could float your island boat! A real strong mouthful softer peat that is honey sweet.This represents good value and has a rich and complex flavour and is almost cask strength.  All distilled, matured and bottled on Islay alone. Takes it's name from a nearby village where the original distillery was based from 1829 - 1929. Matured in three different types of barrels:American Oak and European Oak, via some reused ex-French wine casks contributing to its rich and complex flavour.This whisky would be best suited for an experienced whisky drinker who likes the peaty / smokey and powerful stuff every weekend or on special occasions!",
+  "link"  : "https://scripts.affiliatefuture.com/AFShortUrl.aspx?id=43124",
+  "taste": "Malty Sweetness and Peat Smoke (Non Iodine, more herbal), Touch of Salty Air / Seaweed.",
+  "smell": "Salty, Sweet Bacon, Black Pepper",
+  "finish": "Medium-long finish. Distinctive 'mouth feel', slightly oily, peat smoke,  ginger biscuits, banoffee pie, sweet malt. ",
+  "country": "Scotland",
+  "region": "Islay"   
 },
+
   {
-    "id": 1,
+    "id": 3,
     "title": "Aberlour 12 Year Old Single Malt Scotch Whisky With Giftbox, 70 cl",
     "description": "Scotch Whisky • 70cl • ABV: 40%",
     "image":"./assets/abr.jpg", 
@@ -30,7 +62,7 @@
     "region": "󠁧Speyside"   
 },
 {
-  "id": 2,
+  "id": 4,
 "title": "Tobermory 12 Year Old Whisky 70cl",
 "description": "Scotch Whisky • 70cl • 45.8%",
 "image":"./assets/tob.jpg", 
@@ -45,7 +77,7 @@
 "region": "󠁧Island"
 },
 {
-  "id": 3,
+  "id": 5,
 "title": "GlenDronach Port Wood Whisky 70cl",
 "description": "Scotch Whisky • 70cl • 46%",
 "image":"./assets/glendr.jpg", 
@@ -60,7 +92,7 @@
 "region": "Highland"
 },
 {
-  "id": 4,
+  "id": 6,
 "title": "Caol Ila 13yo 2007 MoM",
 "description": "Scotch Whisky • 70cl • 53.6%",
 "image":"./assets/caol.JPG", 
@@ -76,7 +108,7 @@
 "tags": [""]
 },
 {
-  "id": 5,
+  "id": 7,
   "title": "Glenfarclas 25 Year Old",
   "description": "Scotch Whisky • 70cl • 43%",
   "image":"./assets/glen.webp", 
@@ -92,7 +124,7 @@
   "tags": ["expert"]      
 },
 {
-  "id": 6,
+  "id": 8,
 "title": "Black Friday Whisky Tasting Set",
 "description": "Scotch Tasting Set • 15cl • 45%",
 "image":"./assets/mm.jpg", 
@@ -108,7 +140,7 @@
 },
 
     {
-         "id": 7,
+         "id": 9,
       "title": "Glasgow 1770 Triple Pack (3 x 50ml) Whisky",
       "description": "Three tasty single malt Scotch whisky miniatures from The Glasgow Distillery Co. and its 1770 range!",
     "image":"./assets/glasgow.webp", 
@@ -122,7 +154,7 @@
     "tags": ["inter"]     
     },
      {
-        "id": 8,
+        "id": 10,
       "title": "Ardnamurchan AD/ Gift Pack (4 x 5cl)",
       "description": "A cracking set of miniatures featuring various single malts from the Ardnamurchan AD/ range",
     "image":"./assets/ardnamurchan.webp",
@@ -133,7 +165,7 @@
      "tags": ["inter"]         
     },
      {
-        "id": 9,
+        "id": 11,
         "title": "Glen Moray Port Cask Gift Pack with 2x Glasses Whisky 70cl",
         "description": "This Gift Pack from the Glen Moray Distillery in the prolific Speyside region",
         "image":"./assets/glen-moray.webp", 
@@ -146,7 +178,7 @@
           "tags": ["novice"]       
     },
      {
-       "id": 10,
+       "id": 12,
        "title": "Redbreast 12 Year Old Birdfeeder Gift Pack",
        "description": "From the most popular Irish pot still whiskey brand in the world comes the limited edition Redbreast 12 Year Old Birdfeeder Gift Pack.",
        "image":"./assets/redbreast.webp", 
@@ -157,7 +189,7 @@
       "tags": ["inter"]             
     },
      {
-        "id": 11,
+        "id": 13,
        "title": "Glencairn 6 Glass pack multicoloured",
        "description": "six jewel-toned glasses from the prestigous Glencairn Crystal",
        "image":"./assets/glenglass.jpg", 
@@ -168,7 +200,7 @@
            
     }, 
      {
-        "id": 12,
+        "id": 14,
       "title": "Nikka from the Barrel Silhouette 2 Glass & Pourer Gift Pack",
       "description": "A Japanese blended whisky made with single malt from their Yoichi and Miyagikyo distilleries",
     "image":"./assets/nikka.webp", 
@@ -179,7 +211,7 @@
         
     },
      {
-        "id": 13,
+        "id": 15,
       "title": "GlenAllachie 12 Year Old Single Malt Scotch With Branded Glass",
       "description": "Indulge in the enticing flavor notes,the marriage of oak, fruitiness, and subtle spices.",
     "image":"./assets/glen.jpg", 
