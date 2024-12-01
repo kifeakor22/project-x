@@ -219,6 +219,22 @@
       "price": "Price £61",
      "review": "Another personal favourite of the WT co-founders. Serious street cred for this bottle in your collection. This Highland malt has a lot of citrus (orange) with chocolate and some roasted coffee and vanilla characteristics. A Royal Heritage dates back to 1263 when Chief of the Mackenzie clan saved King Alexander III from a charging stag. Hence the 12 pointed stag emblem was awarded as the clans coat of arms! One for the top shelve of the home bar and fire side stories! Matured in Bourbon & Oloroso sherry casks for that balanced flavour.",
      "link":  "https://amzn.eu/d/aTevzlB"
-    }
+    },
+    {
+      "id": 16,
+      "title": "Ardnamurchan The Midgie Release",
+      "description": "70cl 48% abv Scotch Whisky Single Malt Highland",
+      "image":"./assets/ardnamu.webp", 
+      "alt":"Whisky",
+      "price": "£52.00",
+      "review": "The Midgie, is a limited edition bottling single malt Highland Scotch Whisky that really delivers surprising amounts of flavour & value for money. Coming from an uber trendy, authentic, experimental producer with sound provenance and strong environmental credentials. A great fun expression which pays homage to one of Scotland's most formidable creatures! Without artificial colouring or chill filtration. Absolutely authentic, artisan and flavour forward experimental Whisky at its best! Ardnamurchan are at the forefront of a new wave in the Scotch Whisky scene. Bottled at a punchy strength of 48.1% ABV carrying all those flavour profiles. Made from peated and unpeated spirit, the expression has been matured in a combination of bourbon, sherry, madeira, and sauternes casks. Free from chill filtration and at natural colour this liquid definitely packs a wee bite!.",
+      "link"  : "https://scripts.affiliatefuture.com/AFShortUrl.aspx?id=43125",
+      "taste": "Light, fresh and fruity. Soft peat smoke. Black pepper, toffee, biscuit sweetness,  savoury parmesan, sea salt and warming ginger",
+      "smell": "Bright zingy nose, crystallised ginger, sour apple, manuka honey, parmesan cheese, ",
+      "finish": "Long to medium finish. Lovely mouth feel that coats your teeth. Comes in waves of peppery, spicy then creamy salted caramel, sweet and smokey",
+      "country": "Scotland",
+      "region": "Highland",
+      "tags" : "inter"   
+  }
 
 ]
