@@ -61,7 +61,21 @@
     "country": "Scotland",
     "region": "󠁧Speyside"   
 },
-
+{
+  "id": 4,
+"title": "Tobermory 12 Year Old Whisky 70cl",
+"description": "Scotch Whisky • 70cl • 45.8%",
+"image":"./assets/tobermory.webp", 
+"alt":"Whisky",
+"price": "35.90",
+"review": "WT tried this and its sister expression Ledaig at a recent London Whisky festival and we’re pleasantly surprised. Very accomplished 12 year old expression from a younger distillery based on the picturesque island of Mull.This expression was matured in American oak casks for 12 years before being bottled at 46.3% ABV.",
+"link"  : "https://scripts.affiliatefuture.com/AFShortUrl.aspx?id=43126",
+"taste": "Well balanced malty notes, and a touch oily. Stone fruit sweetness.",
+"smell": "Fruits of pear, peach and apple, with a hint of brown sugar, barley and cinnamon pastries.",
+"finish": "A very balanced dram with flash of orange peel, soft straw / barley , toffee and sweet dates.",
+"country": "Scotland",
+"region": "󠁧Island"
+},
 {
   "id": 5,
 "title": "GlenDronach Port Wood Whisky 70cl",
