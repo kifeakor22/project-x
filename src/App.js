@@ -9,6 +9,8 @@ import Footer from './components/footer';
 import BlogList from './components/blog';
 import NoviceSection from './components/novice';
 import WhiskyLevelUp from './components/intermediary';
+import ProductList from './components/productdetails/productlist';
+import ProductDetail from './components/productdetailsList/productdetail';
 
 
 import './App.css';
@@ -31,6 +33,8 @@ function App() {
            <Route path='/blog' element={<BlogList />} />
            <Route path='/novice' element={<NoviceSection/>} />
            <Route path='intermediary' element={<WhiskyLevelUp/>} />
+           <Route path="productlist" element={<ProductList />} />
+           <Route path="/product/:id" element={<ProductDetail />} />
       </Routes>
       <Footer/>
       </div>

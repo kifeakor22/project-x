@@ -16,6 +16,7 @@ import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import BlackFridayPopup from '../sales';
 import Deal from '../deal';
+import ProductList from '../productdetails/productlist';
 
 function HomeContent() {
   useEffect(() => {
