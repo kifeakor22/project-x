@@ -72,6 +72,7 @@ const ProductDetail = () => {
         >
           {product.price}
         </Typography>
+        
         <Button
           variant="contained"
           sx={{

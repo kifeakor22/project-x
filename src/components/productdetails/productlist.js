@@ -110,6 +110,8 @@ const ProductList = () => {
                 </Typography>
                 <Button
                   variant="contained"
+                   href={product.link}
+            target="_blank"
                   sx={{
                     backgroundColor: colors.primary,
                     color: colors.accent,
@@ -119,10 +121,9 @@ const ProductList = () => {
                       backgroundColor: '#E18B00', // Darker orange
                     },
                   }}
-                  component={Link}
-                  to={`/product/${product.id}`}
+                  
                 >
-                  View Details
+                  Buy Now
                 </Button>
               </CardContent>
             </Card>
