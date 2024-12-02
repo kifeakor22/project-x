@@ -114,7 +114,7 @@ const Nav = () => {
               >
                 Expert
               </Button>
-              <Button onClick={() => navigate('/productlist')}
+              <Button onClick={() => navigate('/intermediary')}
                 className="navLink"
                 variant="button"
                 href=""
@@ -142,7 +142,7 @@ const Nav = () => {
   <List
     sx={{ width: 250 }}
   >
-    {['About us', 'Blog', 'Novice', 'Intermediary', 'Expert', 'Products'].map((text, index) => (
+    {['About us', 'Blog', 'Novice', 'Intermediary', 'Expert', 'Productlist'].map((text, index) => (
       <React.Fragment key={text}>
         <ListItem disablePadding>
           <ListItemButton
