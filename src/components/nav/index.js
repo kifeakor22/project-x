@@ -114,7 +114,7 @@ const Nav = () => {
               >
                 Expert
               </Button>
-              <Button onClick={() => navigate('/intermediary')}
+              <Button onClick={() => navigate('/productlist')}
                 className="navLink"
                 variant="button"
                 href=""
