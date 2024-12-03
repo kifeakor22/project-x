@@ -1,21 +1,5 @@
 [
   {
-    "id": 0,
-    "title": "Talisker Special Releases 2023 Single Malt Scotch Whisky, 70CL",
-    "description": "59.7% Limited Edition Fruity Notes with a Subtle Finish",
-    "image":"./assets/tali.jpg", 
-    "alt":"Whisky",
-    "price": "-55% £49.99; RRP: £110.00RRP",
-    "review": "WT Review:This is a rich and robust Talisker expression - Strong enough to keep you warm on the high seas! Introducing Talisker Special Releases 2023 is a special Scotch Whisky bottled at natural cask strength (59.7%) which carries extra flavour in the high alcohol content. Talisker will always have a special place in our hearts - being the first Single Malt we fell in love with & first distillery tour.This Limited Edition, with simple yet stunning art work - depicts the iconic Caravel sea vessel and pays tribute to the spirit and bravery of original Portuguese sailors and adventurers braving harsh elements and the unforgiving seas to reach the farthest corners of the earth. The Talisker Master blender has tipped his hat to the Portuguese origins of the great seafarer’s ships, by finishing this supreme maritime whisky in a combination of Ruby, White and Tawny port casks - something we have never sampled before! A Ruby or White Port Finish on their own - which are delightful - this one is insane! Perfect for Grandad or Grandma or that wild Aunty or Uncle, or anyone appreciating the sea or boating and an Intermediate / someone already along the seafront on their whisky voyage!",
-    "link"  : "https://amzn.to/49ibVBn",
-    "taste": "House / distillery style still comes through - Sweet sherry, smokey and spicy. Rich, sweetish, smokey and accents of white grapes, dark fruits and dry oak tannin.",
-    "smell": "Balanced, intense with hints of peat stewed over fire, clear notes of fresh sea salt and maritime spray with hints of mussel shells, seaweed,dune sand.",
-    "finish": "Intense & long finish with sea salt, smoke and spices. Richl, robust and rounded. All the flavour profiles & 3 different port characters merge as one creamy-smooth richly fruity taste, with waves of saltiness, smoke and spice.",
-    "country": "Scotland",
-    "region": "Island",
-    "tags":["inter"]
-},
-  {
     "id": 1,
     "title": "Hakushu Reserve Single Malt Whisky",
     "description": "Suntory Single Malt Whiskey",
@@ -251,6 +235,22 @@
     "country": "Scotland",
     "region": "Lowland",
     "tags": ["Intermediate"]
+},
+{
+  "id": 18,
+  "title": "Talisker Special Releases 2023 Single Malt Scotch Whisky, 70CL",
+  "description": "59.7% Limited Edition Fruity Notes with a Subtle Finish",
+  "image":"./assets/tali.jpg", 
+  "alt":"Whisky",
+  "price": "£106.95",
+  "review": "WT Review:This is a rich and robust Talisker expression - Strong enough to keep you warm on the high seas! Introducing Talisker Special Releases 2023 is a special Scotch Whisky bottled at natural cask strength (59.7%) which carries extra flavour in the high alcohol content. Talisker will always have a special place in our hearts - being the first Single Malt we fell in love with & first distillery tour.This Limited Edition, with simple yet stunning art work - depicts the iconic Caravel sea vessel and pays tribute to the spirit and bravery of original Portuguese sailors and adventurers braving harsh elements and the unforgiving seas to reach the farthest corners of the earth. The Talisker Master blender has tipped his hat to the Portuguese origins of the great seafarer’s ships, by finishing this supreme maritime whisky in a combination of Ruby, White and Tawny port casks - something we have never sampled before! A Ruby or White Port Finish on their own - which are delightful - this one is insane! Perfect for Grandad or Grandma or that wild Aunty or Uncle, or anyone appreciating the sea or boating and an Intermediate / someone already along the seafront on their whisky voyage!",
+  "link"  : "https://amzn.to/49ibVBn",
+  "taste": "House / distillery style still comes through - Sweet sherry, smokey and spicy. Rich, sweetish, smokey and accents of white grapes, dark fruits and dry oak tannin.",
+  "smell": "Balanced, intense with hints of peat stewed over fire, clear notes of fresh sea salt and maritime spray with hints of mussel shells, seaweed,dune sand.",
+  "finish": "Intense & long finish with sea salt, smoke and spices. Richl, robust and rounded. All the flavour profiles & 3 different port characters merge as one creamy-smooth richly fruity taste, with waves of saltiness, smoke and spice.",
+  "country": "Scotland",
+  "region": "Island",
+  "tags":["inter"]
 }
 
 ]

@@ -44,7 +44,7 @@ const Deal = () => {
             animation: 'fadeIn 1s ease-in-out',
           }}
         >
-          Black Friday Deals
+          Deals
         </Typography>
         <Box
           sx={{

@@ -14,7 +14,7 @@ import Blog from '../blog';
 import Footer from '../footer';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
-import BlackFridayPopup from '../sales';
+// import BlackFridayPopup from '../sales';
 import Deal from '../deal';
 import ProductList from '../productdetails/productlist';
 
@@ -30,7 +30,7 @@ function HomeContent() {
   return (
     <React.Fragment>
       {/* Black Friday Popup */}
-      <BlackFridayPopup/> {/* This will show the popup on page load */}
+      {/* insert Black friday pop here This will show the popup on page load */}
 
       {/* Hero unit */}
       <Typography
