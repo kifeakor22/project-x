@@ -97,6 +97,7 @@ const WhiskyLevelUp = () => {
                sx={{
                  height: "150px",
                  objectFit: "contain",
+                 marginTop: "10px",
                  marginBottom: "10px",
                }}
              />

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from "react";
 import { Box, Typography, Button, Card, CardContent, CardMedia, Link } from '@mui/material';
 import noviecImage from './assets/novice.png';
 import { useNavigate } from 'react-router-dom';
@@ -9,6 +9,15 @@ const NoviceSection = () => {
 
   // Filter products tagged with "novice"
   const noviceProducts = products.filter((product) => product.tags && product.tags.includes('novice'));
+
+  const [expandedCards, setExpandedCards] = useState({});
+
+  const toggleExpand = (id) => {
+    setExpandedCards((prev) => ({
+      ...prev,
+      [id]: !prev[id],
+    }));
+  };
 
   return (
     <Box
@@ -245,84 +254,89 @@ const NoviceSection = () => {
           }}
         >
           {noviceProducts.map((product) => (
-            <Card
-              key={product.id}
-              sx={{
-                maxWidth: 345,
-                margin: '0 auto',
-                borderRadius: '10px',
-                transition: 'transform 0.3s ease, box-shadow 0.3s ease',
-                '&:hover': {
-                  transform: 'scale(1.05)',
-                  boxShadow: '0 12px 24px rgba(0, 0, 0, 0.2)',
-                },
-              }}
-            >
-                <CardMedia
-  component="img"
-  height="180"
-  image={product.image}
-  alt={product.name}
-  sx={{
-    height: '150px',
-    objectFit: 'contain',
-    marginBottom: '10px',
-    marginTop: '10px',
- 
-    transform: 'scale(1.1)', // Zooms out the image to show more content
-    transition: 'transform 0.3s ease', // Smooth transition when scaling
-  }}
-/>
-
-              <CardContent
-                sx={{
-                  textAlign: 'left',
+           <Card
+           key={product.id}
+           sx={{
+             maxWidth: 345,
+             height: expandedCards[product.id] ? "auto" : "400px",
+             margin: "0 auto",
+             borderRadius: "10px",
+             overflow: "hidden",
+             "&:hover": {
+               transform: "scale(1.05)",
+               boxShadow: "0 12px 24px rgba(0, 0, 0, 0.2)",
+             },
+           }}
+         >
+           <CardMedia
+             component="img"
+             image={product.image}
+             alt={product.name}
+             sx={{
+               height: "150px",
+               objectFit: "contain",
+               marginTop: "10px",
+               marginBottom: "10px",
+             }}
+           />
+           <CardContent>
+             <Typography
+               gutterBottom
+               variant="h5"
+               sx={{ fontWeight: "bold", color: "inherit" }}
+             >
+               {product.title}
+             </Typography>
+             <Typography
+               variant="body1"
+               color="text.primary"
+               sx={{
+                 lineHeight: 1.6,
+                 marginBottom: "10px",
+                 display: expandedCards[product.id] ? "block" : "-webkit-box",
+                 WebkitLineClamp: expandedCards[product.id] ? "none" : 3,
+                 WebkitBoxOrient: "vertical",
+                 overflow: "hidden",
+                 textOverflow: "ellipsis",
+               }}
+             >
+               {product.review}
+             </Typography>
+             <Button
+               size="small"
+               onClick={() => toggleExpand(product.id)}
+               sx={{ marginBottom: "10px",
+                color: '#F44336',
+                fontWeight: 'bold'
                 }}
-              >
-                <Typography
-                  gutterBottom
-                  variant="h5"
-                  component="div"
-                  sx={{ fontWeight: 'bold', color: '#333' }}
-                >
-                  {product.name}
-                </Typography>
-                <Typography
-                  variant="body1"
-                  color="text.primary"
-                  sx={{ lineHeight: 1.6, marginBottom: "10px", fontWeight: "bolder" }}
-                >
-                  {product.review}
-                </Typography>
-                <Typography
-                  variant="body1"
-                  sx={{
-                    fontWeight: 'bold',
-                    color: '#F5A623',
-                    marginBottom: '10px',
-                  }}
-                >
-                  {product.price}
-                </Typography>
-                <Button
-                  href={product.link}
-                  target="_blank"
-                  variant="contained"
-                  sx={{
-                    backgroundColor: '#F5A623',
-                    color: '#FFF',
-                    fontWeight: 'bold',
-                    padding: '10px 15px',
-                    borderRadius: '20px',
-                    '&:hover': {
-                      backgroundColor: '#FFB74D',
-                    },
-                  }}
-                >
-                  View Product
-                </Button>
-              </CardContent>
-            </Card>
+             >
+               {expandedCards[product.id] ? "Show Less" : "Read More"}
+             </Button>
+             <Typography
+               variant="body1"
+               sx={{ fontWeight: "bold", color: "#F5A623" }}
+             >
+               {product.price}
+             </Typography>
+             <Button
+               href={product.link}
+               target="_blank"
+               variant="contained"
+               sx={{
+                 backgroundColor: "#F5A623",
+                 color: "#FFF",
+                 fontWeight: "bold",
+                 padding: "10px 15px",
+                 borderRadius: "20px",
+                 "&:hover": {
+                   backgroundColor: "#FFB74D",
+                 },
+               }}
+             >
+               View Product
+             </Button>
+           </CardContent>
+         </Card>
           ))}
         </Box>
       </Box>
