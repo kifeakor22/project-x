@@ -52,7 +52,7 @@ const BlackFridayPopup = () => {
           padding: '16px 24px',
         }}
       >
-        🎉 Black Friday Sale! 🎉
+        🎉 Sale! 🎉
       </DialogTitle>
 
       {/* Dialog Content */}

@@ -1,5 +1,21 @@
 [
   {
+    "id": 0,
+    "title": "Laphroaig 10 Years Old Sherry Oak Finish",
+    "description": "Single Malt Peated Scotch Whisky | Islay • 70cl • 48% abv",
+    "image":"./assets/712.jpg",
+    "alt":"Whisky",
+    "price": "£50.00",
+    "review": "The classic Islay turned sherry bomb! This has been matured in Bourbon and  Oloroso sherry finish in European oak casks. Combines the unforgettable smell and taste of the classic ten year old with the sweetness and richness and complexity from the sherry oak finish. The result is a very tasty smokey n sweet combo!! Perfect dram for an Intermediate or Whisky drinker that wants to be challenged or surprised!",
+    "link"  : "https://amzn.eu/d/f8W6zTm",
+   "taste": "Sweet smokey, maple syrup, dark chocolate. pine needles",
+    "smell": "Classic Islay peat smoke, medicinal, seaweed, bacon, manuka honey, pine, tar",
+    "finish": "Very long finish, sweet and spicy, honey, pine with lingering medicinal notes",
+    "country": "Scotland",
+    "region": "Islay",
+   "tags": ["Intermediate"]
+},
+  {
     "id": 1,
     "title": "Hakushu Reserve Single Malt Whisky",
     "description": "Suntory Single Malt Whiskey",
