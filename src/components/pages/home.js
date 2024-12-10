@@ -86,7 +86,11 @@ function HomeContent() {
               <p>Let’s start our whisky journey together…</p>
             </Typography>
 
-            <Typography data-aos="fade-up" variant="body1" mt={2} gutterBottom>
+            <Typography data-aos="fade-up" variant="body1" mt={2} gutterBottom
+            sx={{
+              background: 'linear-gradient(90deg, #F44336, #FF9800)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent' }}>
               <p>
                 Hey there, fellow whisky enthusiasts. Welcome to our blog; Whiskytopia. We’re
                 here to use our experience, knowledge, passion, and a touch of humour to guide
