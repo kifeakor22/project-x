@@ -33,9 +33,20 @@ const AboutUs = () => {
           className="hero-image"
         />
       </section>
+      {/* Team Section */}
+      <section className="team-section">
+        <h2>Meet the Team</h2>
+        <p>Welcome to Whiskytopia, a passionate, honest, and humorous Scotch Whisky review site. Meet Garry (G), Tony (T) and KC (K): three enthusiastic geeks who get giddy about whisky and want to keep sharing and learning about the water of life.</p>
+        <p>Look out for Hamish, our Highland Coo and social media guru. He might introduce himself on our platforms, as he is rather knowledgeable.</p>
+      </section>
+
+      {/* Interactive Section */}
+      <section className="interactive-section">
+        <h2>Let's Collab!</h2>
+        <p>This is a two-way street. Share your pictures, comments, opinions, and suggestions for what our followers should be tasting.</p>
+        <p>Contact us to collaborate and share the joy of Scotch Whisky!</p>
+      </section>
       
-
-
       {/* Content Section */}
       <section className="content-section">
         <div className="category">
@@ -60,19 +71,7 @@ const AboutUs = () => {
         </p>
       </section>
 
-      {/* Team Section */}
-      <section className="team-section">
-        <h2>Meet the Team</h2>
-        <p>Welcome to Whiskytopia, a passionate, honest, and humorous Scotch Whisky review site. Meet Garry (G), Tony (T) and KC (K): three enthusiastic geeks who get giddy about whisky and want to keep sharing and learning about the water of life.</p>
-        <p>Look out for Hamish, our Highland Coo and social media guru. He might introduce himself on our platforms, as he is rather knowledgeable.</p>
-      </section>
-
-      {/* Interactive Section */}
-      <section className="interactive-section">
-        <h2>Let's Collab!</h2>
-        <p>This is a two-way street. Share your pictures, comments, opinions, and suggestions for what our followers should be tasting.</p>
-        <p>Contact us to collaborate and share the joy of Scotch Whisky!</p>
-      </section>
+      
     </div>
     </Box>
     </Container>
