@@ -52,9 +52,7 @@ const Nav = () => {
             noWrap
             sx={{
               flexGrow: 1,
-              background: 'linear-gradient(90deg, #F44336, #FF9800)', // Gradient background
-              WebkitBackgroundClip: 'text', // Clips the background to text
-              WebkitTextFillColor: 'transparent', // Makes text fill transparent to reveal the gradient
+              color: 'inherit'
             }}
           >
             WhiskyTopia
@@ -67,7 +65,7 @@ const Nav = () => {
               aria-label="menu"
               onClick={toggleDrawer(true)}
               sx={{
-                background: 'linear-gradient(90deg, #F44336, #FF9800)', // Gradient background
+                color: '#F5A623', // Gold color for Hamburger icon
               }}
             >
               <MenuIcon />
