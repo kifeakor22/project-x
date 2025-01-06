@@ -69,7 +69,7 @@ const BlogPostTemplate = ({ title, date, readTime, image, content, highlight, po
         alt={title}
         sx={{
           height: { xs: '250px', sm: '400px' },
-          objectFit: 'cover',
+          objectFit: 'contain',
           filter: highlight ? 'brightness(0.8)' : 'brightness(1)',
         }}
       />
