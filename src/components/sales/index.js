@@ -15,7 +15,7 @@ const BlackFridayPopup = () => {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    setOpen(false); // Open the popup on component mount
+    setOpen(false); // Open the popup on component mount change to true when you want the popup to open
   }, []);
 
   const handleClose = () => {
