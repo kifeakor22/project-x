@@ -1,4 +1,20 @@
 [
+  {
+    "id": 0,
+    "title": "by Amazon Blended Scotch Whisky 'Special Reserve' 1L",
+    "description": "Made with a blend of single malt and grain whiskies from Scotland's finest whisky regions",
+    "image":"./assets/amazon.jpg", 
+    "alt":"Whisky",
+    "price": "£17",
+    "review": "Amazon Basket Case or Basket Filler?!'What a surprise. How did that get in my Amazon Prime basket?! Surprisingly oakay for a 17 quid bottle of Scotch. Only aged for 3 years in ex-American bourbon barrels - no surprises here. Cheap enough and in plentiful supply. Alarmingly with a metal cap rather than cork top. It’s a blend from other Scotch whiskie both single malts and grain whiskies - my guess is from Highlands and Speyside with a little Islay thrown in. Lowest legally allowable ABV at 40%. Still if you want a big bottle for mixers, cocktails, fancy cooking sauces - Jeff Bezo's yer guy! If this introduces more of the general public to Scotch Whisky - then I'll embrace it. As good as any other mainstream blended Scotch whisky - if not a little smoother. Nice touch with the deer plastered on the label.",
+  "link"  : "https://amzn.to/4gl9qQL",
+    "taste": "Vanilla, Caramel",
+    "smell": "Caramel, dried fruits, hint of light smoke",
+    "finish": "Sweet toffee with gentle spices",
+    "country": "Scotland",
+    "region": "",
+    "tags": ["novice"]
+},
 
   {
     "id": 0,
