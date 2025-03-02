@@ -84,7 +84,7 @@ function HomeContent() {
               <p>Let’s start our whisky journey together…</p>
             </Typography>
 
-            <Typography data-aos="fade-up" variant="body1" mt={2} gutterBottom>
+            <Typography data-aos="fade-up" variant="body1" mt={2} gutterBottom padding={1}>
               <p>
                 Hey there, fellow whisky enthusiasts. Welcome to our blog; Whiskytopia. We’re
                 here to use our experience, knowledge, passion, and a touch of humour to guide
