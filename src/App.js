@@ -7,6 +7,7 @@ import AboutUs from './components/about';
 import Nav from './components/nav';
 import Footer from './components/footer';
 import BlogList from './components/blog';
+import BlogDetail from './components/blogdetails';
 import NoviceSection from './components/novice';
 import WhiskyLevelUp from './components/intermediary';
 import ProductList from './components/productdetails/productlist';
@@ -31,6 +32,7 @@ function App() {
            <Route path="/product" element={<Product/>}></Route>
            <Route path="/about-us" element={<AboutUs />} />
            <Route path='/blog' element={<BlogList />} />
+           <Route path="/blog/:id" element={<BlogDetail />} />
            <Route path='/novice' element={<NoviceSection/>} />
            <Route path='intermediary' element={<WhiskyLevelUp/>} />
            <Route path="productlist" element={<ProductList />} />
