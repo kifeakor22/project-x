@@ -12,8 +12,6 @@ import NoviceSection from './components/novice';
 import WhiskyLevelUp from './components/intermediary';
 import ProductList from './components/productdetails/productlist';
 import ProductDetail from './components/productdetailsList/productdetail';
-
-
 import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './components/pages/home';
