@@ -53,7 +53,7 @@ const BlogDetail = () => {
       </Typography>
 
       {/* Blog Content */}
-      <Box sx={{ lineHeight: 1.7, fontSize: '1.1rem', color: '#444' }}>
+      <Box sx={{ lineHeight: 1.7, fontSize: '1.1rem', color: '#F5F5F5' }}>
         <ReactMarkdown children={blogPost.post} remarkPlugins={[remarkGfm]} components={renderers} />
       </Box>
     </Container>
