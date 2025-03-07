@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
@@ -8,6 +8,7 @@ import blogs from '../../blog.json';
 const BlogDetail = () => {
   const { id } = useParams();
   const blogPost = blogs.find((post, index) => index === parseInt(id, 10));
+  useEffect(() => {window.scrollTo(0,0);},[]);
 
   if (!blogPost) {
     return (

@@ -1,22 +1,17 @@
 import React, { useEffect } from 'react';
 import Box from '@mui/material/Box';
 import './style.css';
-import { Divider } from '@mui/material';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
-import Nav from '../nav';
 import Hero from '../hero';
 import Product from '../products';
 import AOS from 'aos';
 import AboutUsImage from './assets/aboutus.jpg'; // Import your image here
 import Blog from '../blog';
-import Footer from '../footer';
-import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import BlackFridayPopup from '../sales';
 import Deal from '../deal';
-import ProductList from '../productdetails/productlist';
 
 function HomeContent() {
   useEffect(() => {
@@ -45,7 +40,6 @@ function HomeContent() {
           margin: '5px',
           color: 'linear-gradient(90deg, #F44336, #FF9800)',
           fontWeight: 'bolder',
-         color: 'inherit'
 
         }}
       >
