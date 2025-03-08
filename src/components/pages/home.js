@@ -12,6 +12,7 @@ import Blog from '../blog';
 import { useNavigate } from 'react-router-dom';
 import BlackFridayPopup from '../sales';
 import Deal from '../deal';
+import AboutUs from '../about';
 
 function HomeContent() {
   useEffect(() => {
@@ -109,21 +110,12 @@ function HomeContent() {
         </Box>
 
         {/* Centering the Button on small screens */}
-        <Button onClick={() => navigate('/about-us')}
-          sx={{
-            color: "#F5A623",
-            display: 'block',
-            margin: '20px auto', // Center the button
-          }}
-          variant="contained"
-          className="projectBtn"
-          size="large"
-        >
-          About Us
-        </Button>
+        
+        <AboutUs/>
         <Deal/>
         <Blog />
       </Container>
+      
     
       {/* End footer */}
     </React.Fragment>
