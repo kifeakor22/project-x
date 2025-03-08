@@ -48,6 +48,7 @@ function HomeContent() {
 
       {/* Hero unit */}
       <Hero />
+      <Product />
 
       {/* End hero unit */}
       <Container maxWidth="md" component="main">
@@ -121,12 +122,9 @@ function HomeContent() {
           About Us
         </Button>
         <Deal/>
-       
         <Blog />
       </Container>
-      
-      <Product />
-
+    
       {/* End footer */}
     </React.Fragment>
   );
