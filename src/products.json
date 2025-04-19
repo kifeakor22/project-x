@@ -1,6 +1,22 @@
 [
   {
     "id": 0,
+    "title": "Scallywag The Chocolate Edition 2024 Whisky 70cl",
+    "description": "Blended Malt Whisky",
+    "image":"./assets/scall.jpg", 
+    "alt":"Whisky",
+    "price": "£55.50",
+    "review": "If you like sweet and fruity Whisky and chocolate, this is one for you! \nThis is the 7th annual Chocolate Edition, small batches (approx 5,000 bottles) from Douglas Laing’s Scallywag Blended Scotch Whisky range. They are a third-generation, family-owned Scotch whisky company HQ’d in Glasgow, established in 1948 and are both a distiller and a bottler! Until 2019 they were an independent whisky bottler when they acquired and operated the Strathearn Distillery. \nThe little Fox Terrier on the bottle's label is a nod to the distiller's family dog! This 2024 Chocolate edition could have a hidden Wonka-style golden ticket which gives you the  opportunity to win prizes. We love the bottles wrapping paper, which has maps of Portugal on it, referencing the Port Cask finish. \nThis expression has definitely dialled up the chocolatey-ness scale thanks to the maturation in and finishing in port casks. Perfect as a dessert, cocktail-based Easter or Christmas time dram!!",
+    "link"  : "https://scripts.affiliatefuture.com/AFShortUrl.aspx?id=43774",
+    "taste": "Silky smooth, Dates, chocolate coated raspberries, cinnamon, Swiss roll, toffee, oaky",
+    "smell": "Dark chocolate, nutmeg, demerara brown sugar, dark berry fruits (blackcurrants & rasp, rich spices",
+    "finish": "Blackcurrant jam, cocoa powder, ginger, touch of leather, black pepper",
+    "country": "Scotland",
+    "region": "Speyside",
+    "tags": ["novice"]
+},
+  {
+    "id": 0,
     "title": "Jameson Caskmates Stout Edition - Blended Irish Whiskey",
     "description": "Triple Distilled Finished In Craft Stout-Seasoned Barrels 40% ABV",
     "image":"./assets/Jameson.jpg", 
